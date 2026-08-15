@@ -12,7 +12,13 @@ import NodeFormFields from "./NodeFormFields";
  * En knapp som ser ut precis som på den riktiga sidan, med en penna i hörnet.
  * Pennan fäller ut allt man kan göra med knappen.
  */
-export default function EditableNodeButton({ node }: { node: NodeRow }) {
+export default function EditableNodeButton({
+  node,
+  allNodes,
+}: {
+  node: NodeRow;
+  allNodes: NodeRow[];
+}) {
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState(node);
   const { run, busy, error } = useAdminAction();
@@ -21,6 +27,15 @@ export default function EditableNodeButton({ node }: { node: NodeRow }) {
   const changed = JSON.stringify(draft) !== JSON.stringify(node);
 
   async function save() {
+    if (draft.parent_id !== node.parent_id) {
+      const moved = await run({
+        action: "node.reparent",
+        id: node.id,
+        parentId: draft.parent_id,
+      });
+      if (!moved) return;
+    }
+
     const ok = await run({
       action: "node.update",
       id: node.id,
@@ -68,7 +83,7 @@ export default function EditableNodeButton({ node }: { node: NodeRow }) {
 
       {open && (
         <div className="mt-2 flex flex-col gap-4 rounded-2xl border-2 border-brand bg-brand-light p-5">
-          <NodeFormFields draft={draft} onChange={setDraft} />
+          <NodeFormFields draft={draft} onChange={setDraft} allNodes={allNodes} />
 
           <ErrorNote error={error} />
 

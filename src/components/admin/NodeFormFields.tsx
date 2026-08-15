@@ -2,14 +2,17 @@
 
 import type { NodeRow } from "@/lib/store";
 import { Checkbox, Field, fieldClass } from "./EditFields";
+import ParentPicker from "./ParentPicker";
 
 /** Fälten för en knapp. Delas av listvyn och rubriken på knappens egen sida. */
 export default function NodeFormFields({
   draft,
   onChange,
+  allNodes,
 }: {
   draft: NodeRow;
   onChange: (draft: NodeRow) => void;
+  allNodes: NodeRow[];
 }) {
   return (
     <>
@@ -54,6 +57,13 @@ export default function NodeFormFields({
           onChange={(e) => onChange({ ...draft, slug: e.target.value })}
         />
       </Field>
+
+      <ParentPicker
+        node={draft}
+        allNodes={allNodes}
+        value={draft.parent_id}
+        onChange={(parent_id) => onChange({ ...draft, parent_id })}
+      />
 
       <Checkbox
         checked={draft.published}

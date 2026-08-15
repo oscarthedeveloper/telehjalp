@@ -14,6 +14,7 @@ import {
   moveNode,
   moveSolution,
   readSnapshot,
+  reparentNode,
   seedFromFile,
   updateNode,
   updateSetting,
@@ -131,6 +132,15 @@ export async function POST(request: Request) {
 
       case "node.move": {
         await moveNode(String(body.id), Number(body.delta) < 0 ? -1 : 1);
+        refresh();
+        return NextResponse.json({ ok: true });
+      }
+
+      case "node.reparent": {
+        await reparentNode(
+          String(body.id),
+          body.parentId ? String(body.parentId) : null
+        );
         refresh();
         return NextResponse.json({ ok: true });
       }

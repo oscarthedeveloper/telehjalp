@@ -83,7 +83,7 @@ export default async function AdminPage({
 
       <div className="flex flex-col gap-4">
         {top.map((node) => (
-          <EditableNodeButton key={node.id} node={node} />
+          <EditableNodeButton key={node.id} node={node} allNodes={snapshot.nodes} />
         ))}
 
         <AddItemButton

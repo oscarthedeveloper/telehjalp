@@ -730,3 +730,50 @@ export async function importContent(
   await transaction(statements);
   return result;
 }
+
+/**
+ * Flyttar en knapp till en annan förälder. null betyder startsidan.
+ *
+ * Skyddar mot att en knapp flyttas in i sig själv eller i något som ligger
+ * under den – det skulle klippa av hela grenen från trädet.
+ */
+export async function reparentNode(id: string, newParentId: string | null): Promise<void> {
+  if (id === newParentId) {
+    throw new Error("En knapp kan inte ligga under sig själv.");
+  }
+
+  const rows = await query("select id, parent_id from nodes");
+  const parentOf = new Map<string, string | null>();
+  for (const row of rows) {
+    parentOf.set(str(row.id), row.parent_id == null ? null : str(row.parent_id));
+  }
+
+  if (!parentOf.has(id)) throw new Error("Knappen finns inte längre.");
+  if (newParentId !== null && !parentOf.has(newParentId)) {
+    throw new Error("Sidan du vill flytta till finns inte längre.");
+  }
+
+  // Gå uppåt från den nya föräldern. Stöter vi på knappen själv vore
+  // flytten en rundgång.
+  let cursor: string | null = newParentId;
+  const seen = new Set<string>();
+  while (cursor !== null && !seen.has(cursor)) {
+    if (cursor === id) {
+      throw new Error(
+        "Knappen kan inte flyttas in under en av sina egna underknappar."
+      );
+    }
+    seen.add(cursor);
+    cursor = parentOf.get(cursor) ?? null;
+  }
+
+  const siblings = newParentId
+    ? await query("select max(sort_order) as top from nodes where parent_id = ?", [newParentId])
+    : await query("select max(sort_order) as top from nodes where parent_id is null");
+
+  await run("update nodes set parent_id = ?, sort_order = ? where id = ?", [
+    newParentId,
+    Number(siblings[0]?.top ?? 0) + 10,
+    id,
+  ]);
+}

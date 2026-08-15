@@ -31,7 +31,7 @@ export default async function AdminNodePage({ params }: { params: { slug: string
   return (
     <main>
       <AdminTrail trail={trail} />
-      <EditableHeading node={node} />
+      <EditableHeading node={node} allNodes={snapshot.nodes} />
 
       <section>
         <h2 className="mb-3 text-lg font-bold uppercase tracking-wide text-subtle">
@@ -39,7 +39,7 @@ export default async function AdminNodePage({ params }: { params: { slug: string
         </h2>
         <div className="flex flex-col gap-4">
           {children.map((child) => (
-            <EditableNodeButton key={child.id} node={child} />
+            <EditableNodeButton key={child.id} node={child} allNodes={snapshot.nodes} />
           ))}
           <AddItemButton
             label="Lägg till knapp här"

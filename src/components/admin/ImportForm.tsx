@@ -26,7 +26,44 @@ function countTree(nodes: any[]): Counts {
   return count;
 }
 
-export default function ImportForm() {
+/**
+ * Sammanslagningen matchar på adressdel, inte på knappens text. Finns det
+ * redan en knapp med samma text men en annan adressdel blir det två knappar
+ * som ser likadana ut. Bättre att säga till innan än att förklara efteråt.
+ */
+function findClashes(
+  nodes: any[],
+  existing: { slug: string; label: string }[]
+): { label: string; fromSlug: string; toSlug: string }[] {
+  const bySlug = new Map(existing.map((n) => [n.slug, n]));
+  const found: { label: string; fromSlug: string; toSlug: string }[] = [];
+
+  const walk = (list: any[]) => {
+    for (const node of list ?? []) {
+      const label = String(node?.label ?? "").trim();
+      const slug = String(node?.slug ?? "").trim();
+
+      if (label && slug && !bySlug.has(slug)) {
+        const sameLabel = existing.find(
+          (n) => n.label.trim().toLowerCase() === label.toLowerCase()
+        );
+        if (sameLabel) {
+          found.push({ label, fromSlug: sameLabel.slug, toSlug: slug });
+        }
+      }
+      walk(node?.children ?? []);
+    }
+  };
+
+  walk(nodes);
+  return found;
+}
+
+export default function ImportForm({
+  existing,
+}: {
+  existing: { slug: string; label: string }[];
+}) {
   const router = useRouter();
   const [raw, setRaw] = useState("");
   const [mode, setMode] = useState<"merge" | "replace">("merge");
@@ -37,6 +74,7 @@ export default function ImportForm() {
   let parsed: any = null;
   let parseError: string | null = null;
   let counts: Counts | null = null;
+  let clashes: { label: string; fromSlug: string; toSlug: string }[] = [];
 
   if (raw.trim()) {
     try {
@@ -45,6 +83,7 @@ export default function ImportForm() {
         parseError = 'Filen måste innehålla ett fält "nodes" med en lista.';
       } else {
         counts = countTree(parsed.nodes);
+        clashes = findClashes(parsed.nodes, existing);
       }
     } catch (err: any) {
       parseError = `Det här är inte giltig JSON: ${err?.message ?? ""}`;
@@ -137,6 +176,33 @@ export default function ImportForm() {
         />
 
         {parseError && <p className="mt-3 rounded-lg bg-red-50 p-3 text-base text-red-800">{parseError}</p>}
+
+        {clashes.length > 0 && (
+          <div className="mt-3 rounded-lg border-2 border-amber-400 bg-amber-50 p-4">
+            <p className="text-lg font-semibold text-warn">
+              Det blir dubbletter av {clashes.length === 1 ? "en knapp" : `${clashes.length} knappar`}
+            </p>
+            <p className="mt-2 text-base leading-relaxed">
+              Sammanslagningen matchar på adressdel, inte på texten. Följande knappar
+              finns redan med samma text men en annan adressdel, och läggs därför till
+              som nya:
+            </p>
+            <ul className="mt-3 flex flex-col gap-1 text-base">
+              {clashes.map((clash) => (
+                <li key={clash.toSlug}>
+                  <strong>{clash.label}</strong>
+                  <span className="ml-2 font-mono text-sm text-subtle">
+                    {clash.fromSlug} → {clash.toSlug}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 text-base leading-relaxed">
+              Vill du slå ihop dem: ändra adressdelen på den befintliga knappen till
+              den som står till höger innan du importerar. Då uppdateras den i stället.
+            </p>
+          </div>
+        )}
 
         {counts && (
           <p className="mt-3 rounded-lg bg-brand-light p-3 text-lg">

@@ -12,7 +12,13 @@ import NodeFormFields from "./NodeFormFields";
  * Rubriken på en knapps egen sida. Samma text som farmor och farfar ser,
  * med en penna bredvid för att ändra sidan man står på.
  */
-export default function EditableHeading({ node }: { node: NodeRow }) {
+export default function EditableHeading({
+  node,
+  allNodes,
+}: {
+  node: NodeRow;
+  allNodes: NodeRow[];
+}) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState(node);
@@ -21,6 +27,15 @@ export default function EditableHeading({ node }: { node: NodeRow }) {
   const changed = JSON.stringify(draft) !== JSON.stringify(node);
 
   async function save() {
+    if (draft.parent_id !== node.parent_id) {
+      const moved = await run({
+        action: "node.reparent",
+        id: node.id,
+        parentId: draft.parent_id,
+      });
+      if (!moved) return;
+    }
+
     const ok = await run({
       action: "node.update",
       id: node.id,
@@ -59,7 +74,7 @@ export default function EditableHeading({ node }: { node: NodeRow }) {
 
       {open && (
         <div className="mt-3 flex flex-col gap-4 rounded-2xl border-2 border-brand bg-brand-light p-5">
-          <NodeFormFields draft={draft} onChange={setDraft} />
+          <NodeFormFields draft={draft} onChange={setDraft} allNodes={allNodes} />
 
           <ErrorNote error={error} />
 
