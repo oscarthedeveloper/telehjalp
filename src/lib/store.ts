@@ -512,3 +512,48 @@ export async function seedFromFile(): Promise<{ nodes: number; solutions: number
   await transaction(statements);
   return { nodes: nodeCount, solutions: solutionCount };
 }
+
+/* ------------------------------------------------------------------ */
+/* Uppslag i de platta raderna – används av adminsidorna, som behöver  */
+/* se även det som är dolt, och behöver komma åt id:n.                 */
+/* ------------------------------------------------------------------ */
+
+export function nodeBySlug(snapshot: Snapshot, slug: string): NodeRow | undefined {
+  return snapshot.nodes.find((node) => node.slug === slug);
+}
+
+export function childrenOf(snapshot: Snapshot, parentId: string | null): NodeRow[] {
+  return snapshot.nodes
+    .filter((node) => node.parent_id === parentId)
+    .sort((a, b) => a.sort_order - b.sort_order || a.label.localeCompare(b.label, "sv"));
+}
+
+export function solutionsOfNode(snapshot: Snapshot, nodeId: string): SolutionRow[] {
+  return snapshot.solutions
+    .filter((solution) => solution.node_id === nodeId)
+    .sort((a, b) => a.sort_order - b.sort_order || a.title.localeCompare(b.title, "sv"));
+}
+
+export function solutionBySlug(
+  snapshot: Snapshot,
+  nodeId: string,
+  slug: string
+): SolutionRow | undefined {
+  return snapshot.solutions.find((s) => s.node_id === nodeId && s.slug === slug);
+}
+
+/** Vägen från startsidan ned till noden, inklusive noden själv. */
+export function trailOf(snapshot: Snapshot, node: NodeRow): NodeRow[] {
+  const trail: NodeRow[] = [];
+  const seen = new Set<string>();
+  let current: NodeRow | undefined = node;
+
+  while (current && !seen.has(current.id)) {
+    seen.add(current.id);
+    trail.unshift(current);
+    const parentId: string | null = current.parent_id;
+    current = parentId ? snapshot.nodes.find((n) => n.id === parentId) : undefined;
+  }
+
+  return trail;
+}

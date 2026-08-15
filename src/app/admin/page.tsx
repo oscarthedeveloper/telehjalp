@@ -1,8 +1,14 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { isAdmin } from "@/lib/adminAuth";
+import { isConfigured } from "@/lib/db";
+import { childrenOf, readSnapshot } from "@/lib/store";
 import PinForm from "@/components/admin/PinForm";
-import AdminPanel from "@/components/admin/AdminPanel";
+import EditableNodeButton from "@/components/admin/EditableNodeButton";
+import AddItemButton from "@/components/admin/AddItemButton";
+import SeedBox from "@/components/admin/SeedBox";
+import NotConnected from "@/components/admin/NotConnected";
 
 export const dynamic = "force-dynamic";
 
@@ -25,42 +31,73 @@ function missingSettings(): string[] {
   return missing;
 }
 
-/**
- * Två lås:
- *   1. Rätt hemlig nyckel i adressen (?k=...). Fel nyckel ger "Sidan finns inte",
- *      så sidan går inte att snubbla in på.
- *   2. PIN-kod, som ger en signerad kaka i 8 timmar.
- *
- * Är variablerna inte satta alls går panelen ändå inte att komma in i, och då
- * är ett tydligt besked mer värt än en 404 som inte säger något.
- */
-export default function AdminPage({
+export default async function AdminPage({
   searchParams,
 }: {
   searchParams: { k?: string };
 }) {
-  if (isAdmin()) {
-    return <AdminPanel />;
+  /* ------------------------- två lås ------------------------- */
+
+  if (!isAdmin()) {
+    const missing = missingSettings();
+    if (missing.length > 0) return <SetupNeeded missing={missing} />;
+
+    const key = process.env.ADMIN_KEY!.trim();
+    if ((searchParams.k ?? "").trim() !== key) notFound();
+
+    return <PinForm />;
   }
 
-  const missing = missingSettings();
-  if (missing.length > 0) {
-    return <SetupNeeded missing={missing} />;
+  /* -------------------- startsidan, speglad ------------------- */
+
+  if (!isConfigured()) return <NotConnected />;
+
+  let snapshot;
+  try {
+    snapshot = await readSnapshot();
+  } catch (err: any) {
+    return <NotConnected problem={err?.message} />;
   }
 
-  // Trimmas på båda håll: ett efterhängande blanksteg i Netlify är annars
-  // omöjligt att se men gör att nyckeln aldrig matchar.
-  const key = process.env.ADMIN_KEY!.trim();
-  if ((searchParams.k ?? "").trim() !== key) {
-    notFound();
-  }
+  const top = childrenOf(snapshot, null);
 
-  return <PinForm />;
+  return (
+    <main>
+      {snapshot.nodes.length === 0 && <SeedBox />}
+
+      <header className="mb-8 text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-brand">TeleHjälp</h1>
+        <p className="mt-3 text-xl leading-relaxed text-subtle">
+          {snapshot.settings.siteIntro}
+        </p>
+        <p className="mt-2 text-base text-subtle">
+          Texten ändras under{" "}
+          <Link href="/admin/installningar" className="font-semibold text-brand underline">
+            Inställningar
+          </Link>
+          .
+        </p>
+      </header>
+
+      <p className="mb-4 text-2xl font-semibold">Jag har besvär med …</p>
+
+      <div className="flex flex-col gap-4">
+        {top.map((node) => (
+          <EditableNodeButton key={node.id} node={node} />
+        ))}
+
+        <AddItemButton
+          label="Lägg till knapp här"
+          action={{ action: "node.create", parentId: null, label: "Ny knapp" }}
+        />
+      </div>
+    </main>
+  );
 }
 
 function SetupNeeded({ missing }: { missing: string[] }) {
   return (
-    <main className="mx-auto max-w-xl p-8">
+    <main className="p-2">
       <h1 className="text-2xl font-bold">Adminpanelen är inte uppsatt än</h1>
       <p className="mt-3 text-base leading-relaxed text-subtle">
         Följande miljövariabler saknas där sidan körs. Ingen kommer in i panelen

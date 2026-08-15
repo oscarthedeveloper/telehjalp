@@ -144,18 +144,24 @@ Varje `git push` till `main` gör en ny publicering automatiskt. Ändringar i
 exemplen in i databasen. Detta går bara att göra när databasen är tom, så du kan
 inte råka skriva över ditt arbete senare.
 
-**Så fungerar panelen**
+**Så fungerar administrationen**
 
-- Vänsterspalten är hela knappträdet. Klicka på en knapp för att redigera den.
-- **+ Topp** skapar en ny knapp på startsidan. **+ Underknapp** skapar en nivå under den valda.
-- **↑ Upp** och **↓ Ned** flyttar knappen bland sina syskon och sparas direkt.
-- Övriga ändringar sparas när du trycker **Spara** i den ruta du redigerat.
-  Knappen står på *Sparat* och är grå så länge inget ändrats.
-- Nya knappar och orsaker skapas som **dolda**. Kryssa i *Synlig* när texten är färdig –
-  så ser farmor och farfar aldrig något halvfärdigt.
-- **Orsaker och lösningar** är det som visas under "Det kan bero på …".
-  Ett steg per rad i stegrutan.
-- Kryssa i **Visa Proton Pass-knappen** på de lösningar som kräver inloggning.
+Administrationen ser ut precis som den riktiga sidan. Du klickar dig fram genom
+samma knappar som farmor och farfar, och redigerar det du står på.
+
+- **Pennan i knappens högra hörn** fäller ut allt du kan göra med den knappen:
+  ändra text och ikon, flytta upp eller ned, dölja eller ta bort.
+- **Pennan bredvid rubriken** ändrar sidan du står på just nu.
+- **Lägg till knapp här** längst ned i listan skapar en ny knapp på den nivån.
+- **Lägg till orsak här** skapar en ny lösning under "Det kan bero på …".
+- En lösnings innehåll – orsaken, stegen och Proton Pass-knappen – redigerar du
+  inne på lösningens egen sida, där du ser den som farmor och farfar ser den.
+- Nya knappar och orsaker skapas **dolda**. De visas nedtonade med en gul
+  markering i administrationen, och syns inte alls på den riktiga sidan förrän
+  du kryssar i *Synlig*.
+- **Inställningar** i det mörka fältet högst upp rymmer det som inte hör hemma i
+  trädet: starttexten, Proton Pass-länken och meddelandet till Claude. Där finns
+  också en förhandsvisning av hur meddelandet blir.
 
 Ändringarna syns på sidan direkt – ingen ny publicering behövs.
 
