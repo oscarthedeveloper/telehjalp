@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  /* Stor grundtext. Allt annat är relativt detta. */
+  font-size: 20px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #f4f6f9;
+  color: #16202b;
+  font-family: var(--font-plex-sans), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Undvik att sidan "studsar" och att texten blir grå vid tryck. */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Stora, tydliga tryckytor. Minst 64 px höjd enligt Apples riktlinjer,
+   här rejält tilltaget för äldre användare. */
+.tap {
+  min-height: 76px;
+  touch-action: manipulation;
+}
+
+/* Tydlig fokusmarkering för den som navigerar med tangentbord. */
+:focus-visible {
+  outline: 4px solid #1450a3;
+  outline-offset: 3px;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

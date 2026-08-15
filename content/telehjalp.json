@@ -1,0 +1,199 @@
+{
+  "settings": {
+    "siteIntro": "Tryck på det du har besvär med.",
+    "protonPassUrl": "protonpass://",
+    "claudeUrl": "https://claude.ai/new",
+    "aiDeviceInfo": "Jag använder en iPhone 11. Vi har även en iPad.",
+    "aiClosing": "Viktigt: jag är pensionär. Svara på svenska med korta numrerade steg, ett steg i taget. Använd enkla ord och inga tekniska facktermer. Skriv exakt vad jag ska trycka på och var på skärmen jag hittar det."
+  },
+  "nodes": [
+    {
+      "slug": "appar",
+      "label": "En app",
+      "icon": "📲",
+      "heading": "Vilken app har du besvär med?",
+      "published": true,
+      "children": [
+        {
+          "slug": "facebook",
+          "label": "Facebook",
+          "icon": "👥",
+          "heading": "Vad händer med Facebook?",
+          "published": true,
+          "children": [],
+          "solutions": []
+        },
+        {
+          "slug": "instagram",
+          "label": "Instagram",
+          "icon": "📷",
+          "heading": "Vad händer med Instagram?",
+          "published": true,
+          "children": [
+            {
+              "slug": "instagram-flode-markligt",
+              "label": "Mitt flöde ser märkligt ut",
+              "icon": "🤔",
+              "heading": "Flödet ser märkligt ut",
+              "intro": "Här är de vanligaste orsakerna. Prova en i taget, uppifrån och ned.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "fel-konto",
+                  "title": "Du är inloggad på fel konto",
+                  "cause": "Instagram kan komma ihåg flera konton. Har du råkat byta ser du någon annans flöde.",
+                  "steps": [
+                    "Öppna Instagram.",
+                    "Tryck på den lilla runda bilden längst ned till höger.",
+                    "Tryck på ditt namn högst upp på skärmen.",
+                    "En lista med konton visas. Tryck på ditt eget konto.",
+                    "Tryck på huset längst ned till vänster. Nu ska flödet se ut som vanligt."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Behöver du logga in på nytt hittar du lösenordet under Instagram i Proton Pass.",
+                  "published": true
+                },
+                {
+                  "slug": "behover-uppdateras",
+                  "title": "Appen behöver uppdateras",
+                  "cause": "En gammal version av Instagram kan visa fel saker.",
+                  "steps": [
+                    "Öppna App Store (den blå ikonen med ett A).",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står Instagram i listan: tryck på Uppdatera bredvid Instagram.",
+                    "Vänta tills det står Öppna. Öppna sedan Instagram igen."
+                  ],
+                  "needsPassword": false,
+                  "published": true
+                },
+                {
+                  "slug": "utforska-i-stallet",
+                  "title": "Du tittar på Utforska i stället för flödet",
+                  "cause": "Trycker man på förstoringsglaset visas bilder från främlingar. Det är inte ditt flöde.",
+                  "steps": [
+                    "Titta längst ned på skärmen.",
+                    "Tryck på huset längst till vänster.",
+                    "Nu visas flödet med dina vänners inlägg."
+                  ],
+                  "needsPassword": false,
+                  "published": true
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "messenger",
+          "label": "Messenger",
+          "icon": "💬",
+          "heading": "Vad händer med Messenger?",
+          "published": true,
+          "children": [],
+          "solutions": []
+        },
+        {
+          "slug": "whatsapp",
+          "label": "WhatsApp",
+          "icon": "🟢",
+          "heading": "Vad händer med WhatsApp?",
+          "published": true,
+          "children": [],
+          "solutions": []
+        },
+        {
+          "slug": "annan-app",
+          "label": "En annan app",
+          "icon": "❓",
+          "heading": "Vad händer med appen?",
+          "published": true,
+          "children": [
+            {
+              "slug": "annan-app-oppnas-inte",
+              "label": "Appen går inte att öppna",
+              "icon": "🚫",
+              "heading": "Appen går inte att öppna",
+              "intro": "Prova förslagen i tur och ordning. Det första hjälper nästan alltid.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "behover-uppdateras",
+                  "title": "Appen behöver uppdateras",
+                  "cause": "Den vanligaste orsaken. Appen är för gammal för telefonen.",
+                  "steps": [
+                    "Öppna App Store (den blå ikonen med ett A).",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp.",
+                    "Hittar du appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna, och öppna sedan appen igen."
+                  ],
+                  "needsPassword": false,
+                  "published": true
+                },
+                {
+                  "slug": "appen-har-hangt-sig",
+                  "title": "Appen har hängt sig",
+                  "cause": "Ibland fastnar en app. Då behöver den stängas helt och startas om.",
+                  "steps": [
+                    "Dra fingret uppåt från allra längst ned på skärmen och stanna i mitten.",
+                    "Nu visas alla öppna appar som kort.",
+                    "Dra kortet med appen uppåt och ut ur skärmen. Då stängs den.",
+                    "Tryck på hemskärmen och öppna appen igen."
+                  ],
+                  "needsPassword": false,
+                  "published": true
+                },
+                {
+                  "slug": "starta-om-telefonen",
+                  "title": "Telefonen behöver startas om",
+                  "cause": "Hjälper förvånansvärt ofta när något krånglar.",
+                  "steps": [
+                    "Håll in knappen på höger sida och en av volymknapparna samtidigt.",
+                    "Håll kvar tills det står Dra för att stänga av.",
+                    "Dra den vita cirkeln åt höger.",
+                    "Vänta en halv minut.",
+                    "Håll in knappen på höger sida tills äpplet visas."
+                  ],
+                  "needsPassword": false,
+                  "published": true
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        }
+      ],
+      "solutions": []
+    },
+    {
+      "slug": "mobilen",
+      "label": "Mobilen",
+      "icon": "📱",
+      "heading": "Vad är det för besvär med mobilen?",
+      "published": true,
+      "children": [],
+      "solutions": []
+    },
+    {
+      "slug": "ipaden",
+      "label": "iPaden",
+      "icon": "📖",
+      "heading": "Vad är det för besvär med iPaden?",
+      "published": true,
+      "children": [],
+      "solutions": []
+    },
+    {
+      "slug": "internet",
+      "label": "Internet och wifi",
+      "icon": "📶",
+      "heading": "Vad är det för besvär?",
+      "published": true,
+      "children": [],
+      "solutions": []
+    }
+  ]
+}
