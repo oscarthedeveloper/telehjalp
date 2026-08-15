@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 export default function AdminBar() {
   const router = useRouter();
   const pathname = usePathname();
-  const onSettings = pathname === "/admin/installningar";
+  const onRoot = pathname === "/admin";
 
   async function logout() {
     await fetch("/api/admin/login", { method: "DELETE" });
@@ -25,15 +25,17 @@ export default function AdminBar() {
           ✎ Administration
         </Link>
 
-        {onSettings ? (
+        {onRoot ? null : (
           <Link href="/admin" className={link}>
             Sidorna
           </Link>
-        ) : (
-          <Link href="/admin/installningar" className={link}>
-            Inställningar
-          </Link>
         )}
+        <Link href="/admin/importera" className={link}>
+          Importera
+        </Link>
+        <Link href="/admin/installningar" className={link}>
+          Inställningar
+        </Link>
 
         <a href="/" target="_blank" rel="noopener noreferrer" className={link}>
           Visa riktiga sidan

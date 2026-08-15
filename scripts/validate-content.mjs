@@ -40,10 +40,17 @@ try {
 
 check(data && typeof data === "object", "Filen måste innehålla ett objekt.");
 check(Array.isArray(data?.nodes), "Fältet 'nodes' måste vara en lista.");
-check(data?.settings && typeof data.settings === "object", "Fältet 'settings' saknas.");
-
-for (const key of SETTINGS) {
-  check(typeof data?.settings?.[key] === "string", `settings.${key} måste vara en text.`);
+// Inställningar är valfria: en importfil innehåller ofta bara knappar, och
+// appen har inbyggda standardvärden. Men finns de ska de vara texter.
+if (data?.settings === undefined) {
+  warnings.push("Filen saknar 'settings'. Det är i sin ordning för en importfil.");
+} else {
+  check(typeof data.settings === "object", "Fältet 'settings' måste vara ett objekt.");
+  for (const key of SETTINGS) {
+    if (data.settings?.[key] !== undefined) {
+      check(typeof data.settings[key] === "string", `settings.${key} måste vara en text.`);
+    }
+  }
 }
 
 const nodeSlugs = new Map();

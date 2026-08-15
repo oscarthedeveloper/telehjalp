@@ -9,6 +9,7 @@ import {
   deleteNode,
   deleteSolution,
   ensureSchema,
+  importContent,
   isEmpty,
   moveNode,
   moveSolution,
@@ -92,6 +93,13 @@ export async function POST(request: Request) {
           return fail("Databasen innehåller redan knappar. Töm den först om du vill börja om.", 400);
         }
         const result = await seedFromFile();
+        refresh();
+        return NextResponse.json({ ok: true, ...result });
+      }
+
+      case "import": {
+        const mode = body.mode === "replace" ? "replace" : "merge";
+        const result = await importContent(body.content, mode);
         refresh();
         return NextResponse.json({ ok: true, ...result });
       }

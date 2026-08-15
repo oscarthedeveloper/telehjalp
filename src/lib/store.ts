@@ -1,6 +1,16 @@
 import { randomUUID } from "crypto";
-import { DatabaseError, execute, isConfigured, query, run, transaction, type Row } from "./db";
+import {
+  DatabaseError,
+  execute,
+  isConfigured,
+  query,
+  run,
+  transaction,
+  type Row,
+  type Statement,
+} from "./db";
 import { fallbackContent, uniqueSlug } from "./content";
+import { normaliseImport } from "./importContent";
 import { DEFAULT_SETTINGS, type Content, type Node, type Settings, type Solution } from "./types";
 
 /* ------------------------------------------------------------------ */
@@ -556,4 +566,167 @@ export function trailOf(snapshot: Snapshot, node: NodeRow): NodeRow[] {
   }
 
   return trail;
+}
+
+/* ------------------------------------------------------------------ */
+/* Import av en färdig JSON                                            */
+/* ------------------------------------------------------------------ */
+
+export type ImportMode = "merge" | "replace";
+
+export type ImportResult = {
+  nodesCreated: number;
+  nodesUpdated: number;
+  solutionsCreated: number;
+  solutionsUpdated: number;
+  settingsUpdated: number;
+};
+
+/**
+ * Skriver in ett helt innehållsträd.
+ *
+ *   "merge"   – knappar som redan finns (samma adressdel) uppdateras,
+ *               nya läggs till. Inget tas bort.
+ *   "replace" – allt befintligt innehåll tas bort först.
+ *
+ * Allt läses först, räknas ut i minnet och skrivs sedan som en enda
+ * transaktion. Går något fel har ingenting ändrats.
+ */
+export async function importContent(
+  input: unknown,
+  mode: ImportMode = "merge"
+): Promise<ImportResult> {
+  const { settings, nodes } = normaliseImport(input);
+
+  const existing = mode === "replace" ? null : await readSnapshot();
+  const nodeIdBySlug = new Map<string, string>();
+  const solutionIdByKey = new Map<string, string>();
+
+  if (existing) {
+    for (const row of existing.nodes) nodeIdBySlug.set(row.slug, row.id);
+    for (const row of existing.solutions) {
+      solutionIdByKey.set(`${row.node_id}::${row.slug}`, row.id);
+    }
+  }
+
+  const statements: Statement[] = [];
+  const result: ImportResult = {
+    nodesCreated: 0,
+    nodesUpdated: 0,
+    solutionsCreated: 0,
+    solutionsUpdated: 0,
+    settingsUpdated: 0,
+  };
+
+  if (mode === "replace") {
+    statements.push({ sql: "delete from solutions" });
+    statements.push({ sql: "delete from nodes" });
+  }
+
+  const walk = (list: Node[], parentId: string | null) => {
+    list.forEach((node, index) => {
+      const order = (index + 1) * 10;
+      const published = node.published === false ? 0 : 1;
+      const existingId = nodeIdBySlug.get(node.slug);
+      const id = existingId ?? randomUUID();
+
+      if (existingId) {
+        result.nodesUpdated += 1;
+        statements.push({
+          sql: `update nodes set label = ?, icon = ?, heading = ?, intro = ?,
+                                 sort_order = ?, published = ?
+                where id = ?`,
+          args: [
+            node.label,
+            node.icon ?? null,
+            node.heading ?? null,
+            node.intro ?? null,
+            order,
+            published,
+            id,
+          ],
+        });
+      } else {
+        result.nodesCreated += 1;
+        nodeIdBySlug.set(node.slug, id);
+        statements.push({
+          sql: `insert into nodes (id, parent_id, slug, label, icon, heading, intro, sort_order, published)
+                values (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            id,
+            parentId,
+            node.slug,
+            node.label,
+            node.icon ?? null,
+            node.heading ?? null,
+            node.intro ?? null,
+            order,
+            published,
+          ],
+        });
+      }
+
+      (node.solutions ?? []).forEach((solution, position) => {
+        const key = `${id}::${solution.slug}`;
+        const existingSolutionId = solutionIdByKey.get(key);
+        const solutionOrder = (position + 1) * 10;
+        const solutionPublished = solution.published === false ? 0 : 1;
+
+        if (existingSolutionId) {
+          result.solutionsUpdated += 1;
+          statements.push({
+            sql: `update solutions set title = ?, cause = ?, steps = ?, needs_password = ?,
+                                       password_hint = ?, sort_order = ?, published = ?
+                  where id = ?`,
+            args: [
+              solution.title,
+              solution.cause ?? null,
+              JSON.stringify(solution.steps ?? []),
+              solution.needsPassword === true ? 1 : 0,
+              solution.passwordHint ?? null,
+              solutionOrder,
+              solutionPublished,
+              existingSolutionId,
+            ],
+          });
+        } else {
+          result.solutionsCreated += 1;
+          const solutionId = randomUUID();
+          solutionIdByKey.set(key, solutionId);
+          statements.push({
+            sql: `insert into solutions (id, node_id, slug, title, cause, steps, needs_password, password_hint, sort_order, published)
+                  values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            args: [
+              solutionId,
+              id,
+              solution.slug,
+              solution.title,
+              solution.cause ?? null,
+              JSON.stringify(solution.steps ?? []),
+              solution.needsPassword === true ? 1 : 0,
+              solution.passwordHint ?? null,
+              solutionOrder,
+              solutionPublished,
+            ],
+          });
+        }
+      });
+
+      walk(node.children ?? [], id);
+    });
+  };
+
+  walk(nodes, null);
+
+  for (const [key, value] of Object.entries(settings)) {
+    result.settingsUpdated += 1;
+    statements.push({
+      sql: `insert into settings (key, value) values (?, ?)
+            on conflict (key) do update set value = excluded.value`,
+      args: [key, String(value)],
+    });
+  }
+
+  await transaction(statements);
+  return result;
 }

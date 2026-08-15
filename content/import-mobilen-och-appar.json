@@ -1,0 +1,2203 @@
+{
+  "nodes": [
+    {
+      "slug": "appar",
+      "label": "En app",
+      "icon": "📲",
+      "heading": "Vilken app har du besvär med?",
+      "published": true,
+      "children": [
+        {
+          "slug": "facebook",
+          "label": "Facebook",
+          "icon": "👥",
+          "heading": "Vad händer med Facebook?",
+          "published": true,
+          "children": [
+            {
+              "slug": "fb-flode",
+              "label": "Mitt flöde ser konstigt ut",
+              "icon": "🤔",
+              "heading": "Flödet ser konstigt ut",
+              "intro": "Här är de vanligaste orsakerna. Prova en i taget, uppifrån och ned.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "fel-konto",
+                  "title": "Du är inloggad på fel konto",
+                  "cause": "Facebook kan minnas flera konton. Har någon annan loggat in på telefonen ser du deras flöde.",
+                  "steps": [
+                    "Öppna Facebook.",
+                    "Tryck på de tre vågräta strecken längst ned till höger.",
+                    "Dra listan längst ned och tryck på ditt namn, eller på Byt konto.",
+                    "Tryck på ditt eget konto i listan.",
+                    "Tryck på huset längst ned till vänster. Nu ska flödet se ut som vanligt."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Behöver du logga in på nytt finns lösenordet under Facebook i Proton Pass."
+                },
+                {
+                  "slug": "reels",
+                  "title": "Du tittar på Reels i stället för flödet",
+                  "cause": "Reels är korta filmer från främlingar. Det är lätt att råka hamna där.",
+                  "steps": [
+                    "Titta på raden med symboler längst ned på skärmen.",
+                    "Tryck på huset längst till vänster.",
+                    "Nu visas flödet med dina vänners inlägg igen."
+                  ]
+                },
+                {
+                  "slug": "uppdatera-fb",
+                  "title": "Appen behöver uppdateras",
+                  "cause": "En gammal version kan visa fel saker eller se konstig ut.",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                },
+                {
+                  "slug": "tidsordning",
+                  "title": "Flödet visar inte det senaste först",
+                  "cause": "Facebook väljer själv vilka inlägg du ser. Menyerna i appen ändras några gånger om året. Hittar du inte exakt de ord som står här, leta efter något som liknar.",
+                  "steps": [
+                    "Öppna Facebook.",
+                    "Tryck på de tre strecken längst ned till höger.",
+                    "Dra nedåt och tryck på Inställningar och sekretess.",
+                    "Tryck på Inställningar.",
+                    "Leta efter Flödesinställningar eller Flöde och tryck på det.",
+                    "Välj Senaste. Nu visas inläggen i tidsordning."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "fb-logga-in",
+              "label": "Jag kan inte logga in",
+              "icon": "🔑",
+              "heading": "Inloggningen fungerar inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "logga-in",
+                  "title": "Lösenordet är fel eller glömt",
+                  "cause": "Alla lösenord finns i Proton Pass. Skriv aldrig in ett lösenord du gissat flera gånger i rad, då kan kontot låsas.",
+                  "steps": [
+                    "Tryck på den blå knappen längre ned för att öppna Proton Pass.",
+                    "Sök upp Facebook i listan.",
+                    "Tryck på lösenordet. Då kopieras det.",
+                    "Gå tillbaka hit och öppna appen igen.",
+                    "Håll fingret nedtryckt i rutan för lösenord tills Klistra in visas, och tryck på det.",
+                    "Tryck på Logga in."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Sök på Facebook i Proton Pass."
+                },
+                {
+                  "slug": "engangskod",
+                  "title": "Appen skickar en kod till telefonen",
+                  "cause": "Koden kommer som ett meddelande och gäller bara några minuter.",
+                  "steps": [
+                    "Lämna appen öppen. Tryck inte på Tillbaka.",
+                    "Svep uppåt från nederkanten och öppna Meddelanden.",
+                    "Läs de sex siffrorna i det nya meddelandet.",
+                    "Gå tillbaka till appen och skriv in siffrorna.",
+                    "Lämna aldrig ut koden till någon som ringer eller skriver. Ingen seriös person frågar efter den."
+                  ]
+                },
+                {
+                  "slug": "appen-hakat-upp",
+                  "title": "Appen har hakat upp sig",
+                  "cause": "Ibland fastnar inloggningsrutan. Att stänga appen helt brukar lösa det.",
+                  "steps": [
+                    "Dra fingret uppåt från allra längst ned på skärmen och stanna med fingret kvar mitt på skärmen.",
+                    "Nu visas alla öppna appar som kort bredvid varandra.",
+                    "Leta upp kortet med appen och dra det uppåt, ut ur skärmen. Då stängs den helt.",
+                    "Tryck på hemskärmen och öppna appen igen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "fb-aviseringar",
+              "label": "Jag får inga aviseringar",
+              "icon": "🔕",
+              "heading": "Inga aviseringar från Facebook",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "notiser-telefonen",
+                  "title": "Aviseringar är avstängda i telefonen",
+                  "cause": "Det här är den vanligaste orsaken.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Notiser.",
+                    "Dra listan nedåt tills du hittar Facebook och tryck på den.",
+                    "Se till att Tillåt notiser är påslaget, alltså grönt.",
+                    "Kryssa i Låsskärm, Notiscenter och Banderoller så att du ser dem på flera ställen."
+                  ]
+                },
+                {
+                  "slug": "notiser-appen",
+                  "title": "Aviseringar är avstängda inne i appen",
+                  "cause": "Menyerna i appen ändras några gånger om året. Hittar du inte exakt de ord som står här, leta efter något som liknar.",
+                  "steps": [
+                    "Öppna Facebook.",
+                    "Tryck på de tre strecken eller din profilbild längst ned till höger.",
+                    "Dra nedåt och tryck på Inställningar.",
+                    "Tryck på Aviseringar.",
+                    "Slå på det du vill bli meddelad om."
+                  ]
+                },
+                {
+                  "slug": "stor-ej-notiser",
+                  "title": "Stör ej är påslaget i telefonen",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Ser du en lila eller mörk knapp med en halvmåne är Stör ej påslaget.",
+                    "Tryck på halvmånen så att knappen slocknar och blir grå.",
+                    "Svep uppåt för att stänga rutan."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "fb-lagga-upp",
+              "label": "Jag kan inte lägga upp en bild",
+              "icon": "🖼️",
+              "heading": "Bilden går inte att lägga upp",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "tillstand-bilder",
+                  "title": "Facebook får inte komma åt dina bilder",
+                  "cause": "Telefonen frågar en gång om tillstånd. Svarade man nej syns inga bilder i appen.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Dra nedåt tills du hittar Facebook och tryck på den.",
+                    "Tryck på Bilder.",
+                    "Välj Alla bilder.",
+                    "Öppna Facebook och prova igen."
+                  ]
+                },
+                {
+                  "slug": "langsamt-internet",
+                  "title": "Internet är för långsamt",
+                  "cause": "Bilder är stora och behöver en stabil uppkoppling.",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn. En ruta med runda knappar visas.",
+                    "Titta på knappen som ser ut som ett uppochnedvänt V med streck. Är den blå är wifi på.",
+                    "Är den grå: tryck på den så den blir blå.",
+                    "Svep uppåt för att stänga rutan.",
+                    "Ladda hellre upp bilder när du är hemma än ute.",
+                    "Prova igen när wifi-knappen är blå."
+                  ]
+                },
+                {
+                  "slug": "uppdatera-fb-bild",
+                  "title": "Appen behöver uppdateras",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "fb-konstigt",
+              "label": "Jag har fått ett konstigt meddelande eller en vänförfrågan",
+              "icon": "🛑",
+              "heading": "Något känns inte rätt",
+              "intro": "Bra att du stannade upp. Läs igenom lugnt innan du gör något.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "bedrageri",
+                  "title": "Det är troligen ett bedrägeriförsök",
+                  "cause": "Bedragare skriver på Facebook och utger sig för att vara vänner, myndigheter eller lotterier.",
+                  "steps": [
+                    "Tryck inte på någon länk i meddelandet.",
+                    "Svara inte.",
+                    "Lämna aldrig ut BankID, koder, lösenord eller kortnummer. Ingen bank, myndighet eller polis frågar någonsin efter det.",
+                    "Är du det minsta osäker: ring den som hjälper dig med tekniken och fråga innan du gör något."
+                  ]
+                },
+                {
+                  "slug": "van-kapad",
+                  "title": "En vän verkar ha blivit kapad",
+                  "cause": "Får du ett konstigt meddelande från någon du känner är det ofta någon annan som tagit över kontot.",
+                  "steps": [
+                    "Svara inte i appen.",
+                    "Ring vännen på telefon och fråga om de skrivit till dig.",
+                    "Har de inte det: berätta för dem att kontot är kapat.",
+                    "Skicka aldrig pengar eller koder, hur övertygande meddelandet än verkar."
+                  ]
+                },
+                {
+                  "slug": "blockera-fb",
+                  "title": "Blockera personen",
+                  "steps": [
+                    "Öppna meddelandet eller profilen.",
+                    "Tryck på namnet allra högst upp.",
+                    "Dra nedåt i listan.",
+                    "Tryck på Blockera och bekräfta."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "instagram",
+          "label": "Instagram",
+          "icon": "📷",
+          "heading": "Vad händer med Instagram?",
+          "published": true,
+          "children": [
+            {
+              "slug": "instagram-flode-markligt",
+              "label": "Mitt flöde ser märkligt ut",
+              "icon": "🤔",
+              "heading": "Flödet ser märkligt ut",
+              "intro": "Här är de vanligaste orsakerna. Prova en i taget, uppifrån och ned.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "fel-konto",
+                  "title": "Du är inloggad på fel konto",
+                  "cause": "Instagram kan komma ihåg flera konton. Har du råkat byta ser du någon annans flöde.",
+                  "steps": [
+                    "Öppna Instagram.",
+                    "Tryck på den lilla runda bilden längst ned till höger.",
+                    "Tryck på ditt namn högst upp på skärmen.",
+                    "En lista med konton visas. Tryck på ditt eget konto.",
+                    "Tryck på huset längst ned till vänster. Nu ska flödet se ut som vanligt."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Behöver du logga in på nytt hittar du lösenordet under Instagram i Proton Pass."
+                },
+                {
+                  "slug": "behover-uppdateras",
+                  "title": "Appen behöver uppdateras",
+                  "cause": "En gammal version av Instagram kan visa fel saker.",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                },
+                {
+                  "slug": "utforska-i-stallet",
+                  "title": "Du tittar på Utforska i stället för flödet",
+                  "cause": "Trycker man på förstoringsglaset visas bilder från främlingar. Det är inte ditt flöde.",
+                  "steps": [
+                    "Titta längst ned på skärmen.",
+                    "Tryck på huset längst till vänster.",
+                    "Nu visas flödet med dina vänners inlägg."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "ig-logga-in",
+              "label": "Jag kan inte logga in",
+              "icon": "🔑",
+              "heading": "Inloggningen fungerar inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "logga-in",
+                  "title": "Lösenordet är fel eller glömt",
+                  "cause": "Alla lösenord finns i Proton Pass. Skriv aldrig in ett lösenord du gissat flera gånger i rad, då kan kontot låsas.",
+                  "steps": [
+                    "Tryck på den blå knappen längre ned för att öppna Proton Pass.",
+                    "Sök upp Instagram i listan.",
+                    "Tryck på lösenordet. Då kopieras det.",
+                    "Gå tillbaka hit och öppna appen igen.",
+                    "Håll fingret nedtryckt i rutan för lösenord tills Klistra in visas, och tryck på det.",
+                    "Tryck på Logga in."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Sök på Instagram i Proton Pass."
+                },
+                {
+                  "slug": "engangskod",
+                  "title": "Appen skickar en kod till telefonen",
+                  "cause": "Koden kommer som ett meddelande och gäller bara några minuter.",
+                  "steps": [
+                    "Lämna appen öppen. Tryck inte på Tillbaka.",
+                    "Svep uppåt från nederkanten och öppna Meddelanden.",
+                    "Läs de sex siffrorna i det nya meddelandet.",
+                    "Gå tillbaka till appen och skriv in siffrorna.",
+                    "Lämna aldrig ut koden till någon som ringer eller skriver. Ingen seriös person frågar efter den."
+                  ]
+                },
+                {
+                  "slug": "appen-hakat-upp",
+                  "title": "Appen har hakat upp sig",
+                  "steps": [
+                    "Dra fingret uppåt från allra längst ned på skärmen och stanna med fingret kvar mitt på skärmen.",
+                    "Nu visas alla öppna appar som kort bredvid varandra.",
+                    "Leta upp kortet med appen och dra det uppåt, ut ur skärmen. Då stängs den helt.",
+                    "Tryck på hemskärmen och öppna appen igen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "ig-lagga-upp",
+              "label": "Jag kan inte lägga upp en bild",
+              "icon": "🖼️",
+              "heading": "Bilden går inte att lägga upp",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "tillstand-bilder-ig",
+                  "title": "Instagram får inte komma åt dina bilder",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt tills du hittar Instagram och tryck på den.",
+                    "Tryck på Bilder.",
+                    "Välj Alla bilder.",
+                    "Öppna Instagram och prova igen."
+                  ]
+                },
+                {
+                  "slug": "langsamt-ig",
+                  "title": "Internet är för långsamt",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn. En ruta med runda knappar visas.",
+                    "Titta på knappen som ser ut som ett uppochnedvänt V med streck. Är den blå är wifi på.",
+                    "Är den grå: tryck på den så den blir blå.",
+                    "Svep uppåt för att stänga rutan."
+                  ]
+                },
+                {
+                  "slug": "uppdatera-ig",
+                  "title": "Appen behöver uppdateras",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "ig-aviseringar",
+              "label": "Jag får inga aviseringar",
+              "icon": "🔕",
+              "heading": "Inga aviseringar från Instagram",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "notiser-telefonen",
+                  "title": "Aviseringar är avstängda i telefonen",
+                  "cause": "Det här är den vanligaste orsaken.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Notiser.",
+                    "Dra listan nedåt tills du hittar Instagram och tryck på den.",
+                    "Se till att Tillåt notiser är påslaget, alltså grönt.",
+                    "Kryssa i Låsskärm, Notiscenter och Banderoller så att du ser dem på flera ställen."
+                  ]
+                },
+                {
+                  "slug": "notiser-appen",
+                  "title": "Aviseringar är avstängda inne i appen",
+                  "cause": "Menyerna i appen ändras några gånger om året. Hittar du inte exakt de ord som står här, leta efter något som liknar.",
+                  "steps": [
+                    "Öppna Instagram.",
+                    "Tryck på de tre strecken eller din profilbild längst ned till höger.",
+                    "Dra nedåt och tryck på Inställningar.",
+                    "Tryck på Aviseringar.",
+                    "Slå på det du vill bli meddelad om."
+                  ]
+                },
+                {
+                  "slug": "stor-ej-notiser",
+                  "title": "Stör ej är påslaget i telefonen",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Ser du en lila eller mörk knapp med en halvmåne är Stör ej påslaget.",
+                    "Tryck på halvmånen så att knappen slocknar och blir grå.",
+                    "Svep uppåt för att stänga rutan."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "messenger",
+          "label": "Messenger",
+          "icon": "💬",
+          "heading": "Vad händer med Messenger?",
+          "published": true,
+          "children": [
+            {
+              "slug": "mess-nya-meddelanden",
+              "label": "Jag ser inte nya meddelanden",
+              "icon": "📭",
+              "heading": "Nya meddelanden syns inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "notiser-messenger",
+                  "title": "Aviseringar är avstängda i telefonen",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Notiser.",
+                    "Dra listan nedåt tills du hittar Messenger och tryck på den.",
+                    "Se till att Tillåt notiser är påslaget, alltså grönt.",
+                    "Kryssa i Låsskärm, Notiscenter och Banderoller så att du ser dem på flera ställen."
+                  ]
+                },
+                {
+                  "slug": "uppdatera-mess",
+                  "title": "Appen behöver uppdateras",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                },
+                {
+                  "slug": "stang-mess",
+                  "title": "Appen har hakat upp sig",
+                  "cause": "Messenger kan sluta hämta nytt utan att det syns.",
+                  "steps": [
+                    "Dra fingret uppåt från allra längst ned på skärmen och stanna med fingret kvar mitt på skärmen.",
+                    "Nu visas alla öppna appar som kort bredvid varandra.",
+                    "Leta upp kortet med appen och dra det uppåt, ut ur skärmen. Då stängs den helt.",
+                    "Tryck på hemskärmen och öppna appen igen."
+                  ]
+                },
+                {
+                  "slug": "meddelandeforfragningar",
+                  "title": "Meddelandet ligger bland förfrågningar",
+                  "cause": "Meddelanden från personer du inte är vän med hamnar i en egen lista. Menyerna i appen ändras några gånger om året. Hittar du inte exakt de ord som står här, leta efter något som liknar.",
+                  "steps": [
+                    "Öppna Messenger.",
+                    "Tryck på din profilbild längst upp till vänster.",
+                    "Leta efter Meddelandeförfrågningar och tryck på det.",
+                    "Här ligger meddelanden från personer du inte är vän med."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "mess-videosamtal",
+              "label": "Videosamtal fungerar inte",
+              "icon": "📹",
+              "heading": "Videosamtalet fungerar inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "tillstand-kamera",
+                  "title": "Messenger får inte använda kameran eller mikrofonen",
+                  "cause": "Telefonen frågar en gång om tillstånd. Svarade man nej blir bilden svart eller ljudet tyst.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt tills du hittar Messenger och tryck på den.",
+                    "Slå på Mikrofon så knappen blir grön.",
+                    "Slå på Kamera så knappen blir grön.",
+                    "Öppna Messenger och ring igen."
+                  ]
+                },
+                {
+                  "slug": "ljudet-hors-inte",
+                  "title": "Ljudet hörs inte under samtalet",
+                  "steps": [
+                    "Under samtalet, tryck på högtalarsymbolen på skärmen.",
+                    "Tryck på den övre volymknappen på vänster sida flera gånger.",
+                    "Svep nedåt från övre högra hörnet och kontrollera att bluetooth-knappen är grå.",
+                    "Är den blå: tryck på den så ljudet kommer ur telefonen."
+                  ]
+                },
+                {
+                  "slug": "svagt-internet",
+                  "title": "Internet är för svagt",
+                  "cause": "Video behöver mycket mer uppkoppling än vanliga samtal.",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn. En ruta med runda knappar visas.",
+                    "Titta på knappen som ser ut som ett uppochnedvänt V med streck. Är den blå är wifi på.",
+                    "Är den grå: tryck på den så den blir blå.",
+                    "Svep uppåt för att stänga rutan.",
+                    "Ring hellre hemifrån än ute.",
+                    "Sitt nära wifi-lådan om bilden hackar."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "mess-logga-in",
+              "label": "Jag kan inte logga in",
+              "icon": "🔑",
+              "heading": "Inloggningen fungerar inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "logga-in-fb",
+                  "title": "Lösenordet är fel eller glömt",
+                  "cause": "Alla lösenord finns i Proton Pass. Skriv aldrig in ett lösenord du gissat flera gånger i rad, då kan kontot låsas.",
+                  "steps": [
+                    "Tryck på den blå knappen längre ned för att öppna Proton Pass.",
+                    "Sök upp Facebook i listan.",
+                    "Tryck på lösenordet. Då kopieras det.",
+                    "Gå tillbaka hit och öppna appen igen.",
+                    "Håll fingret nedtryckt i rutan för lösenord tills Klistra in visas, och tryck på det.",
+                    "Tryck på Logga in."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Sök på Facebook i Proton Pass."
+                },
+                {
+                  "slug": "samma-som-facebook",
+                  "title": "Messenger använder Facebook-lösenordet",
+                  "cause": "Messenger och Facebook hänger ihop. Det är samma konto och samma lösenord.",
+                  "steps": [
+                    "Öppna Facebook först och kontrollera att du är inloggad där.",
+                    "Fungerar Facebook: öppna Messenger igen.",
+                    "Tryck på ditt namn i listan över konton i stället för att skriva lösenordet."
+                  ]
+                },
+                {
+                  "slug": "engangskod",
+                  "title": "Appen skickar en kod till telefonen",
+                  "cause": "Koden kommer som ett meddelande och gäller bara några minuter.",
+                  "steps": [
+                    "Lämna appen öppen. Tryck inte på Tillbaka.",
+                    "Svep uppåt från nederkanten och öppna Meddelanden.",
+                    "Läs de sex siffrorna i det nya meddelandet.",
+                    "Gå tillbaka till appen och skriv in siffrorna.",
+                    "Lämna aldrig ut koden till någon som ringer eller skriver. Ingen seriös person frågar efter den."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "whatsapp",
+          "label": "WhatsApp",
+          "icon": "🟢",
+          "heading": "Vad händer med WhatsApp?",
+          "published": true,
+          "children": [
+            {
+              "slug": "wa-nya-meddelanden",
+              "label": "Jag ser inte nya meddelanden",
+              "icon": "📭",
+              "heading": "Nya meddelanden syns inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "notiser-wa",
+                  "title": "Aviseringar är avstängda i telefonen",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Notiser.",
+                    "Dra listan nedåt tills du hittar WhatsApp och tryck på den.",
+                    "Se till att Tillåt notiser är påslaget, alltså grönt.",
+                    "Kryssa i Låsskärm, Notiscenter och Banderoller så att du ser dem på flera ställen."
+                  ]
+                },
+                {
+                  "slug": "notiser-i-wa",
+                  "title": "Aviseringar är avstängda inne i WhatsApp",
+                  "steps": [
+                    "Öppna WhatsApp.",
+                    "Tryck på Inställningar längst ned till höger.",
+                    "Tryck på Aviseringar.",
+                    "Slå på Visa aviseringar för både meddelanden och grupper."
+                  ]
+                },
+                {
+                  "slug": "tystad-chatt",
+                  "title": "Chatten är tystad",
+                  "cause": "En tystad chatt visar en liten överstruken högtalare bredvid namnet.",
+                  "steps": [
+                    "Öppna WhatsApp och titta i listan över chattar.",
+                    "Ser du en överstruken högtalare bredvid ett namn är den tystad.",
+                    "Håll fingret på chatten.",
+                    "Tryck på Ljud på."
+                  ]
+                },
+                {
+                  "slug": "uppdatera-wa",
+                  "title": "Appen behöver uppdateras",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "wa-bilder",
+              "label": "Bilder och filmer laddas inte",
+              "icon": "🖼️",
+              "heading": "Bilderna kommer inte fram",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "tryck-for-att-hamta",
+                  "title": "Bilden måste hämtas först",
+                  "cause": "WhatsApp hämtar inte alltid bilder automatiskt för att spara på mobildata.",
+                  "steps": [
+                    "Öppna chatten.",
+                    "Tryck mitt på den suddiga bilden.",
+                    "En liten cirkel visas medan bilden hämtas.",
+                    "Vänta tills bilden blir skarp."
+                  ]
+                },
+                {
+                  "slug": "hamta-automatiskt",
+                  "title": "Låt bilder hämtas automatiskt",
+                  "steps": [
+                    "Öppna WhatsApp.",
+                    "Tryck på Inställningar längst ned till höger.",
+                    "Tryck på Lagring och data.",
+                    "Under Automatisk nedladdning, tryck på Bilder.",
+                    "Välj Wi-Fi och mobilnät."
+                  ]
+                },
+                {
+                  "slug": "fullt-wa",
+                  "title": "Telefonen är full",
+                  "cause": "Utan ledigt utrymme kan ingenting hämtas.",
+                  "steps": [
+                    "Öppna Inställningar, Allmänt, iPhone-lagring.",
+                    "Titta på det färgade fältet högst upp.",
+                    "Är det nästan fullt: gå till Mobilen och sedan Det är fullt i telefonen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "wa-videosamtal",
+              "label": "Videosamtal fungerar inte",
+              "icon": "📹",
+              "heading": "Videosamtalet fungerar inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "tillstand-wa",
+                  "title": "WhatsApp får inte använda kameran eller mikrofonen",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt tills du hittar WhatsApp och tryck på den.",
+                    "Slå på Mikrofon så knappen blir grön.",
+                    "Slå på Kamera så knappen blir grön.",
+                    "Öppna WhatsApp och ring igen."
+                  ]
+                },
+                {
+                  "slug": "svagt-internet-wa",
+                  "title": "Internet är för svagt",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn. En ruta med runda knappar visas.",
+                    "Titta på knappen som ser ut som ett uppochnedvänt V med streck. Är den blå är wifi på.",
+                    "Är den grå: tryck på den så den blir blå.",
+                    "Svep uppåt för att stänga rutan."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "wa-ny-telefon",
+              "label": "Jag har bytt telefon och saknar mina samtal",
+              "icon": "📱",
+              "heading": "Gamla samtal saknas efter telefonbyte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "aterstall-backup",
+                  "title": "Hämta tillbaka från säkerhetskopian",
+                  "cause": "Det går bara direkt efter att appen installerats. Har du redan börjat använda den behövs hjälp.",
+                  "steps": [
+                    "Har du precis installerat WhatsApp: appen frågar själv om du vill hämta din historik.",
+                    "Tryck på Återställ och vänta.",
+                    "Har du redan hoppat över den frågan: hör av dig till den som hjälper dig med tekniken.",
+                    "Avinstallera inte appen på egen hand, då kan samtalen försvinna för gott."
+                  ]
+                },
+                {
+                  "slug": "sla-pa-backup",
+                  "title": "Slå på säkerhetskopiering inför nästa gång",
+                  "steps": [
+                    "Öppna WhatsApp.",
+                    "Tryck på Inställningar längst ned till höger.",
+                    "Tryck på Chattar.",
+                    "Tryck på Säkerhetskopiering av chattar.",
+                    "Tryck på Automatisk säkerhetskopiering och välj Dagligen."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "annan-app",
+          "label": "En annan app",
+          "icon": "❓",
+          "heading": "Vad händer med appen?",
+          "intro": "Gäller till exempel Göteborgsposten, banken, SJ eller Vädret.",
+          "published": true,
+          "children": [
+            {
+              "slug": "annan-app-oppnas-inte",
+              "label": "Appen går inte att öppna",
+              "icon": "🚫",
+              "heading": "Appen går inte att öppna",
+              "intro": "Prova förslagen i tur och ordning. Det första hjälper nästan alltid.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "behover-uppdateras",
+                  "title": "Appen behöver uppdateras",
+                  "cause": "Den vanligaste orsaken. Appen är för gammal för telefonen.",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                },
+                {
+                  "slug": "appen-har-hangt-sig",
+                  "title": "Appen har hängt sig",
+                  "cause": "Ibland fastnar en app. Då behöver den stängas helt och startas om.",
+                  "steps": [
+                    "Dra fingret uppåt från allra längst ned på skärmen och stanna med fingret kvar mitt på skärmen.",
+                    "Nu visas alla öppna appar som kort bredvid varandra.",
+                    "Leta upp kortet med appen och dra det uppåt, ut ur skärmen. Då stängs den helt.",
+                    "Tryck på hemskärmen och öppna appen igen."
+                  ]
+                },
+                {
+                  "slug": "starta-om-telefonen",
+                  "title": "Telefonen behöver startas om",
+                  "cause": "Hjälper förvånansvärt ofta när något krånglar.",
+                  "steps": [
+                    "Håll in knappen på höger sida och den övre volymknappen på vänster sida samtidigt.",
+                    "Håll kvar tills det står Dra för att stänga av högst upp.",
+                    "Dra den vita cirkeln åt höger med fingret.",
+                    "Vänta en halv minut medan skärmen är svart.",
+                    "Håll in knappen på höger sida tills det vita äpplet visas. Släpp då."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "app-kraschar",
+              "label": "Appen stängs av sig själv",
+              "icon": "💥",
+              "heading": "Appen stängs mitt i",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "uppdatera-krasch",
+                  "title": "Appen behöver uppdateras",
+                  "cause": "Nästan alla krascher beror på att appen är för gammal för telefonens system.",
+                  "steps": [
+                    "Öppna App Store, den blå ikonen med ett vitt A.",
+                    "Tryck på den runda bilden längst upp till höger.",
+                    "Dra listan nedåt med fingret och släpp. Nu letar telefonen efter uppdateringar.",
+                    "Står appen i listan: tryck på Uppdatera bredvid den.",
+                    "Vänta tills det står Öppna. Öppna sedan appen igen."
+                  ]
+                },
+                {
+                  "slug": "plats-krasch",
+                  "title": "Telefonen är full",
+                  "cause": "En app som inte får plats att arbeta stängs av telefonen.",
+                  "steps": [
+                    "Öppna Inställningar, Allmänt, iPhone-lagring.",
+                    "Titta på det färgade fältet högst upp.",
+                    "Är det nästan fullt är det troligen orsaken.",
+                    "Gå till Mobilen och sedan Det är fullt i telefonen för hur du gör plats."
+                  ]
+                },
+                {
+                  "slug": "installera-om",
+                  "title": "Installera om appen",
+                  "cause": "Sista utvägen. Kontrollera först att du har lösenordet i Proton Pass, eftersom du måste logga in igen.",
+                  "steps": [
+                    "Kontrollera i Proton Pass att lösenordet till appen finns sparat.",
+                    "Håll fingret på appens ikon på hemskärmen tills en meny visas.",
+                    "Tryck på Ta bort app, och sedan Radera app.",
+                    "Öppna App Store och tryck på Sök längst ned.",
+                    "Skriv appens namn och tryck på molnet med pil nedåt.",
+                    "Öppna appen och logga in med lösenordet från Proton Pass."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Kontrollera att lösenordet finns i Proton Pass innan du tar bort appen."
+                }
+              ]
+            },
+            {
+              "slug": "app-logga-in",
+              "label": "Jag kan inte logga in i appen",
+              "icon": "🔑",
+              "heading": "Inloggningen fungerar inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "logga-in",
+                  "title": "Lösenordet är fel eller glömt",
+                  "cause": "Alla lösenord finns i Proton Pass. Skriv aldrig in ett lösenord du gissat flera gånger i rad, då kan kontot låsas.",
+                  "steps": [
+                    "Tryck på den blå knappen längre ned för att öppna Proton Pass.",
+                    "Sök upp appen i listan.",
+                    "Tryck på lösenordet. Då kopieras det.",
+                    "Gå tillbaka hit och öppna appen igen.",
+                    "Håll fingret nedtryckt i rutan för lösenord tills Klistra in visas, och tryck på det.",
+                    "Tryck på Logga in."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Sök på appen i Proton Pass."
+                },
+                {
+                  "slug": "bankid",
+                  "title": "Appen vill ha BankID",
+                  "cause": "Banker och myndigheter använder BankID i stället för lösenord.",
+                  "steps": [
+                    "Tryck på Logga in med BankID i appen.",
+                    "Telefonen växlar själv över till BankID-appen.",
+                    "Skriv din personliga kod, eller titta på telefonen om du använder ansiktet.",
+                    "Du växlas tillbaka automatiskt när det är klart.",
+                    "Använd aldrig BankID för att någon ringt och bett dig göra det."
+                  ]
+                },
+                {
+                  "slug": "appen-hakat-app",
+                  "title": "Appen har hakat upp sig",
+                  "steps": [
+                    "Dra fingret uppåt från allra längst ned på skärmen och stanna med fingret kvar mitt på skärmen.",
+                    "Nu visas alla öppna appar som kort bredvid varandra.",
+                    "Leta upp kortet med appen och dra det uppåt, ut ur skärmen. Då stängs den helt.",
+                    "Tryck på hemskärmen och öppna appen igen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "app-annorlunda",
+              "label": "Appen ser annorlunda ut än förut",
+              "icon": "😕",
+              "heading": "Appen har bytt utseende",
+              "intro": "Appar görs om ibland. Ingenting är trasigt, men saker har flyttat sig.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "nytt-utseende",
+                  "title": "Appen har gjorts om",
+                  "cause": "Utvecklarna ändrar utseendet någon gång per år. Funktionerna finns kvar.",
+                  "steps": [
+                    "Titta längst ned på skärmen. Där brukar de viktigaste knapparna ligga.",
+                    "Leta efter tre streck eller tre prickar, som brukar dölja en meny.",
+                    "Hittar du inte det du söker: tryck på Fråga AI längst ned här och beskriv vad du letar efter."
+                  ]
+                },
+                {
+                  "slug": "morkt-lage-app",
+                  "title": "Appen har blivit svart",
+                  "cause": "Följer appen telefonens mörka läge blir bakgrunden svart och texten vit.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Tryck på Skärm och ljusstyrka.",
+                    "Tryck på Ljust högst upp.",
+                    "Öppna appen igen."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        }
+      ],
+      "solutions": []
+    },
+    {
+      "slug": "mobilen",
+      "label": "Mobilen",
+      "icon": "📱",
+      "heading": "Vad är det för besvär med mobilen?",
+      "intro": "Tryck på det som stämmer bäst.",
+      "published": true,
+      "children": [
+        {
+          "slug": "mobil-lagring",
+          "label": "Det är fullt i telefonen",
+          "icon": "💾",
+          "heading": "Vad är det som inte får plats?",
+          "published": true,
+          "children": [
+            {
+              "slug": "lagring-fullt",
+              "label": "Det står att lagringen är full",
+              "icon": "⚠️",
+              "heading": "Lagringen är full",
+              "intro": "Prova ett förslag i taget, uppifrån och ned. Det första brukar ge mest plats.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "papperskorg-bilder",
+                  "title": "Papperskorgen i Bilder är full",
+                  "cause": "Bilder du raderat ligger kvar i 30 dagar och tar plats hela tiden. Här ligger ofta flera gigabyte.",
+                  "steps": [
+                    "Öppna Bilder, den färgglada blomman.",
+                    "Tryck på Album längst ned till höger.",
+                    "Dra listan nedåt tills du ser rubriken Verktyg och under den Nyligen raderade.",
+                    "Tryck på Nyligen raderade. Titta på telefonen om den ber om ditt ansikte.",
+                    "Tryck på Välj längst upp till höger.",
+                    "Tryck på Radera alla längst ned till vänster.",
+                    "Tryck på Radera för att bekräfta."
+                  ]
+                },
+                {
+                  "slug": "se-vad-som-tar-plats",
+                  "title": "Se vad som tar mest plats",
+                  "cause": "Innan du raderar något är det bra att veta vad som faktiskt tar utrymmet.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Allmänt.",
+                    "Tryck på iPhone-lagring. Vänta några sekunder medan telefonen räknar.",
+                    "Högst upp visas ett färgat fält som visar hur fullt det är.",
+                    "Under fältet ligger en lista med apparna, den som tar mest plats högst upp.",
+                    "Tryck på en app i listan för att se vad du kan göra med den."
+                  ]
+                },
+                {
+                  "slug": "avlasta-appar",
+                  "title": "Avlasta appar du sällan använder",
+                  "cause": "Att avlasta tar bort själva appen men behåller allt ditt i den. Ingenting går förlorat.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Allmänt.",
+                    "Tryck på iPhone-lagring. Vänta några sekunder medan telefonen räknar.",
+                    "Tryck på en app du sällan använder.",
+                    "Tryck på Avlasta app och bekräfta.",
+                    "Ikonen ligger kvar på hemskärmen med ett litet moln bredvid namnet.",
+                    "Trycker du på ikonen hämtas appen tillbaka med allt ditt kvar."
+                  ]
+                },
+                {
+                  "slug": "radera-appar",
+                  "title": "Ta bort appar du inte använder alls",
+                  "cause": "Appar du aldrig öppnar kan tas bort helt. Du kan alltid hämta dem gratis igen.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Allmänt.",
+                    "Tryck på iPhone-lagring. Vänta några sekunder medan telefonen räknar.",
+                    "Bläddra i listan och leta efter appar du inte känner igen.",
+                    "Tryck på appen.",
+                    "Tryck på Radera app.",
+                    "Tryck på Radera app en gång till för att bekräfta."
+                  ]
+                },
+                {
+                  "slug": "gamla-meddelanden",
+                  "title": "Låt gamla meddelanden radera sig själva",
+                  "cause": "Meddelanden med bilder och filmer samlar på sig i åratal.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Meddelanden, den gröna pratbubblan.",
+                    "Dra nedåt till rubriken Meddelandehistorik och tryck på Behåll meddelanden.",
+                    "Välj 1 år.",
+                    "Tryck på Radera när telefonen frågar."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "lagring-foto",
+              "label": "Jag kan inte ta fler foton",
+              "icon": "📸",
+              "heading": "Det går inte att ta fler foton",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "telefonen-full",
+                  "title": "Telefonen är full",
+                  "cause": "Kameran behöver ledigt utrymme för varje bild.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Allmänt.",
+                    "Tryck på iPhone-lagring. Vänta några sekunder medan telefonen räknar.",
+                    "Titta på det färgade fältet högst upp. Är det helt fullt är det orsaken.",
+                    "Töm först papperskorgen i Bilder. Det ger nästan alltid plats direkt.",
+                    "Tryck på Tillbaka och gå till Det står att lagringen är full för de stegen."
+                  ]
+                },
+                {
+                  "slug": "icloud-fullt",
+                  "title": "iCloud är fullt",
+                  "cause": "Bilderna sparas även på Apples servrar. De 5 gigabyte man får gratis tar slut med tiden.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Tryck på ditt namn allra högst upp.",
+                    "Tryck på iCloud.",
+                    "Högst upp ser du en stapel över hur mycket som är använt.",
+                    "Är stapeln nästan full behöver du antingen rensa eller köpa mer plats.",
+                    "Mer plats kostar en liten summa i månaden. Ring den som hjälper dig innan du köper något."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "lagring-uppdatering",
+              "label": "Det finns inte plats att uppdatera",
+              "icon": "🔄",
+              "heading": "Uppdateringen får inte plats",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "gor-plats",
+                  "title": "Gör plats genom att avlasta appar",
+                  "cause": "En uppdatering behöver flera gigabyte ledigt medan den installeras.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Allmänt.",
+                    "Tryck på iPhone-lagring. Vänta några sekunder medan telefonen räknar.",
+                    "Tryck på de tre appar som ligger högst upp i listan, en i taget.",
+                    "Tryck på Avlasta app för var och en.",
+                    "Gå sedan tillbaka och prova uppdateringen igen.",
+                    "Du kan hämta tillbaka apparna efteråt genom att trycka på deras ikoner."
+                  ]
+                },
+                {
+                  "slug": "radera-halvfardig",
+                  "title": "Ta bort den halvfärdiga uppdateringen",
+                  "cause": "En avbruten uppdatering kan ligga kvar och blockera utrymme.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Allmänt.",
+                    "Tryck på iPhone-lagring. Vänta några sekunder medan telefonen räknar.",
+                    "Bläddra i listan tills du hittar iOS eller iPhone-programvara.",
+                    "Tryck på den.",
+                    "Tryck på Radera uppdatering och bekräfta.",
+                    "Gå till Inställningar, Allmänt, Programuppdatering och börja om."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-meddelanden",
+          "label": "Meddelanden och SMS",
+          "icon": "💬",
+          "heading": "Vad händer med meddelandena?",
+          "published": true,
+          "children": [
+            {
+              "slug": "medd-kan-inte-skicka",
+              "label": "Jag kan inte skicka ett meddelande",
+              "icon": "🚫",
+              "heading": "Meddelandet går inte att skicka",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "rott-utropstecken",
+                  "title": "Det står ett rött utropstecken bredvid",
+                  "cause": "Det betyder att meddelandet inte kom fram. Det går nästan alltid att skicka om.",
+                  "steps": [
+                    "Tryck på det röda utropstecknet bredvid meddelandet.",
+                    "Tryck på Försök igen.",
+                    "Går det fortfarande inte: tryck på det röda utropstecknet igen.",
+                    "Tryck på Skicka som SMS. Då går det den vanliga vägen i stället."
+                  ]
+                },
+                {
+                  "slug": "ingen-tackning",
+                  "title": "Telefonen har ingen täckning",
+                  "cause": "Utan täckning kan ingenting skickas.",
+                  "steps": [
+                    "Titta längst upp till vänster på skärmen.",
+                    "Ser du fyra små prickar eller streck har du bra täckning.",
+                    "Står det Ingen täckning eller Söker: gå till ett annat rum, eller ut.",
+                    "Vänta tills prickarna visas och prova att skicka igen."
+                  ]
+                },
+                {
+                  "slug": "flygplanslage",
+                  "title": "Flygplansläget är påslaget",
+                  "cause": "Med flygplansläget på stängs allt av. Det är lätt att råka trycka på.",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Ser du en orange knapp med ett flygplan är flygplansläget på.",
+                    "Tryck på flygplanet så att knappen blir grå.",
+                    "Vänta en halv minut medan telefonen hittar nätet igen.",
+                    "Svep uppåt för att stänga rutan."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "medd-kommer-inte-fram",
+              "label": "Mina meddelanden kommer inte fram",
+              "icon": "📭",
+              "heading": "Meddelandena verkar inte komma fram",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "gron-bubbla",
+                  "title": "Gröna bubblor är helt normala",
+                  "cause": "Blå bubblor går mellan iPhone-telefoner. Gröna är vanliga SMS och används när mottagaren har en annan sorts telefon. Båda kommer fram.",
+                  "steps": [
+                    "Titta på färgen på dina egna bubblor i samtalet.",
+                    "Är de gröna skickas de som vanligt SMS. Det är inget fel.",
+                    "Bilder blir suddigare i gröna meddelanden. Det är också normalt.",
+                    "Vill du skicka en skarp bild: skicka den via WhatsApp i stället."
+                  ]
+                },
+                {
+                  "slug": "imessage-hakat-upp",
+                  "title": "iMessage har hakat upp sig",
+                  "cause": "Ibland fastnar tjänsten som skickar de blå meddelandena. Att stänga av och på brukar lösa det.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Meddelanden.",
+                    "Tryck på den gröna knappen bredvid iMessage så att den blir grå.",
+                    "Vänta en halv minut.",
+                    "Tryck på knappen igen så att den blir grön.",
+                    "Vänta någon minut. Under tiden står det Väntar på aktivering, och det ska det göra."
+                  ]
+                },
+                {
+                  "slug": "notiser-av",
+                  "title": "Du ser inte svaren som kommer",
+                  "cause": "Meddelandena kommer fram, men telefonen säger inte till.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Notiser.",
+                    "Dra listan nedåt tills du hittar Meddelanden och tryck på den.",
+                    "Se till att Tillåt notiser är påslaget, alltså grönt.",
+                    "Kryssa i Låsskärm, Notiscenter och Banderoller så att du ser dem på flera ställen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "medd-konstiga",
+              "label": "Jag har fått ett konstigt meddelande",
+              "icon": "🛑",
+              "heading": "Ett konstigt meddelande",
+              "intro": "Här gäller det att inte göra något förhastat. Läs igenom lugnt.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "bluffmeddelande",
+                  "title": "Det är nästan säkert ett bluffmeddelande",
+                  "cause": "Bedragare skickar meddelanden som ser ut att komma från Postnord, banken, Skatteverket eller Apple. De vill åt dina pengar.",
+                  "steps": [
+                    "Tryck inte på någon länk i meddelandet.",
+                    "Svara inte.",
+                    "Lämna aldrig ut BankID, koder, lösenord eller kortnummer. Ingen bank, myndighet eller polis frågar någonsin efter det.",
+                    "Är du det minsta osäker: ring den som hjälper dig med tekniken och fråga innan du gör något.",
+                    "Håll fingret nedtryckt på meddelandet i listan.",
+                    "Tryck på Radera, och sedan på Radera igen."
+                  ]
+                },
+                {
+                  "slug": "blockera-avsandare",
+                  "title": "Blockera avsändaren",
+                  "cause": "När numret är blockerat kommer inget mer därifrån.",
+                  "steps": [
+                    "Öppna meddelandet.",
+                    "Tryck på namnet eller numret allra högst upp på skärmen.",
+                    "Tryck på Info.",
+                    "Dra nedåt och tryck på Blockera den som ringer.",
+                    "Tryck på Blockera kontakt för att bekräfta."
+                  ]
+                },
+                {
+                  "slug": "filtrera-okanda",
+                  "title": "Lägg okända avsändare i en egen lista",
+                  "cause": "Då hamnar reklam och bluff för sig, och stör inte i den vanliga listan.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Meddelanden.",
+                    "Dra nedåt till rubriken Meddelandefiltrering.",
+                    "Slå på Filtrera okända avsändare så knappen blir grön.",
+                    "Nu finns en flik högst upp i Meddelanden där de hamnar."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "medd-hittar-inte",
+              "label": "Jag hittar inte ett gammalt meddelande",
+              "icon": "🔍",
+              "heading": "Ett gammalt meddelande är borta",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "sok",
+                  "title": "Sök efter meddelandet",
+                  "steps": [
+                    "Öppna Meddelanden.",
+                    "Dra listan nedåt med fingret tills en sökruta visas högst upp.",
+                    "Skriv ett ord du minns från meddelandet.",
+                    "Tryck på träffen i listan."
+                  ]
+                },
+                {
+                  "slug": "nyligen-raderade",
+                  "title": "Titta bland nyligen raderade",
+                  "cause": "Raderade meddelanden ligger kvar i 30 dagar innan de försvinner.",
+                  "steps": [
+                    "Öppna Meddelanden.",
+                    "Tryck på Filter eller Redigera längst upp till vänster.",
+                    "Tryck på Visa nyligen raderade.",
+                    "Hittar du meddelandet: tryck på det och sedan på Återställ."
+                  ]
+                },
+                {
+                  "slug": "raderas-automatiskt",
+                  "title": "Telefonen raderar gamla meddelanden av sig själv",
+                  "cause": "Det finns en inställning som städar bort gammalt automatiskt.",
+                  "steps": [
+                    "Öppna Inställningar och dra nedåt till Meddelanden.",
+                    "Dra nedåt till Behåll meddelanden.",
+                    "Står det 30 dagar eller 1 år är det förklaringen.",
+                    "Vill du behålla allt: välj För alltid."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-uppdatering",
+          "label": "Uppdatering av telefonen",
+          "icon": "⚙️",
+          "heading": "Vad gäller det?",
+          "published": true,
+          "children": [
+            {
+              "slug": "upd-behover",
+              "label": "Telefonen säger att den behöver uppdateras",
+              "icon": "🆕",
+              "heading": "Telefonen vill uppdateras",
+              "intro": "Det är bra att göra. Uppdateringar täpper till säkerhetshål.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "gor-uppdateringen",
+                  "title": "Så gör du uppdateringen",
+                  "cause": "Det tar en stund men sköter sig självt. Gör det på kvällen när du inte behöver telefonen.",
+                  "steps": [
+                    "Sätt telefonen i laddaren och låt den sitta kvar hela tiden.",
+                    "Se till att du är hemma, så att telefonen är på ditt wifi.",
+                    "Öppna Inställningar.",
+                    "Tryck på Allmänt.",
+                    "Tryck på Programuppdatering.",
+                    "Tryck på Hämta och installera.",
+                    "Skriv in din lösenkod om telefonen frågar.",
+                    "Lägg ifrån dig telefonen. Den startar om av sig själv. Det kan ta en halvtimme."
+                  ]
+                },
+                {
+                  "slug": "automatiskt",
+                  "title": "Låt telefonen sköta det själv i fortsättningen",
+                  "cause": "Då slipper du bli påmind, och den gör det på natten när du sover.",
+                  "steps": [
+                    "Öppna Inställningar, Allmänt, Programuppdatering.",
+                    "Tryck på Automatiska uppdateringar.",
+                    "Slå på båda knapparna så att de blir gröna.",
+                    "Lägg telefonen i laddaren på nätterna, så sköter den sig."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "upd-fastnar",
+              "label": "Uppdateringen blir aldrig klar",
+              "icon": "⏳",
+              "heading": "Uppdateringen har fastnat",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "vanta-langre",
+                  "title": "Vänta längre än det känns rimligt",
+                  "cause": "En uppdatering kan ta över en timme utan att något syns hända. Äpplet med ett streck under betyder att den arbetar.",
+                  "steps": [
+                    "Låt telefonen ligga kvar i laddaren.",
+                    "Rör den inte och tryck inte på några knappar.",
+                    "Gå och gör något annat i en timme.",
+                    "Fylls strecket långsamt är allt som det ska."
+                  ]
+                },
+                {
+                  "slug": "starta-om",
+                  "title": "Starta om telefonen",
+                  "cause": "Har ingenting hänt på flera timmar är det rimligt att starta om.",
+                  "steps": [
+                    "Håll in knappen på höger sida och den övre volymknappen på vänster sida samtidigt.",
+                    "Håll kvar tills det står Dra för att stänga av högst upp.",
+                    "Dra den vita cirkeln åt höger med fingret.",
+                    "Vänta en halv minut medan skärmen är svart.",
+                    "Håll in knappen på höger sida tills det vita äpplet visas. Släpp då.",
+                    "Öppna sedan Inställningar, Allmänt, Programuppdatering och börja om."
+                  ]
+                },
+                {
+                  "slug": "plats-saknas",
+                  "title": "Det finns inte plats",
+                  "cause": "Uppdateringen behöver flera gigabyte ledigt medan den installeras.",
+                  "steps": [
+                    "Öppna Inställningar, den grå ikonen med ett kugghjul.",
+                    "Tryck på Allmänt.",
+                    "Tryck på iPhone-lagring. Vänta några sekunder medan telefonen räknar.",
+                    "Titta på det färgade fältet högst upp.",
+                    "Är det nästan fullt är det orsaken.",
+                    "Tryck på Tillbaka och gå till Det är fullt i telefonen för hur du gör plats."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "upd-annorlunda",
+              "label": "Allt ser annorlunda ut efter uppdateringen",
+              "icon": "😕",
+              "heading": "Något har flyttat sig",
+              "intro": "Ingenting är borta. Sakerna ligger bara på ett nytt ställe.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "hitta-appar",
+                  "title": "Ikonerna har flyttat sig",
+                  "steps": [
+                    "Svep åt vänster på hemskärmen för att bläddra mellan sidorna.",
+                    "Hittar du inte appen: dra fingret nedåt mitt på hemskärmen.",
+                    "En sökruta visas högst upp.",
+                    "Skriv de första bokstäverna i appens namn och tryck på den i listan."
+                  ]
+                },
+                {
+                  "slug": "texten-blev-liten",
+                  "title": "Texten blev mindre",
+                  "cause": "Uppdateringar återställer ibland textstorleken.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Tryck på Skärm och ljusstyrka.",
+                    "Tryck på Textstorlek.",
+                    "Dra reglaget längst ned åt höger tills texten känns bra."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-ljud",
+          "label": "Ljud och ringsignal",
+          "icon": "🔊",
+          "heading": "Vad är det för besvär med ljudet?",
+          "published": true,
+          "children": [
+            {
+              "slug": "ljud-hor-inte",
+              "label": "Jag hör inte när det ringer",
+              "icon": "🔕",
+              "heading": "Telefonen hörs inte när den ringer",
+              "intro": "Prova i den här ordningen. Den första orsaken är den vanligaste.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "omkopplaren",
+                  "title": "Den lilla omkopplaren står på tyst",
+                  "cause": "Ovanför volymknapparna sitter en liten omkopplare som stänger av allt ljud. Den är lätt att råka putta på i fickan.",
+                  "steps": [
+                    "Titta på telefonens vänstra sida, ovanför de två volymknapparna.",
+                    "Där sitter en liten omkopplare som går att skjuta fram och tillbaka.",
+                    "Syns ett orange streck bakom den står telefonen på tyst.",
+                    "Skjut omkopplaren framåt, mot skärmen, så att det orange försvinner.",
+                    "Nu ska telefonen ringa som vanligt igen."
+                  ]
+                },
+                {
+                  "slug": "ringvolym",
+                  "title": "Volymen för ringsignalen är nedskruvad",
+                  "cause": "Volymen för ringsignalen är skild från volymen för musik och samtal.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Ljud och haptik.",
+                    "Under rubriken Ringsignal och aviseringar finns ett reglage.",
+                    "Dra reglaget så långt åt höger du kan med fingret.",
+                    "Slå på Ändra med knappar om du vill kunna höja med knapparna på sidan."
+                  ]
+                },
+                {
+                  "slug": "stor-ej",
+                  "title": "Stör ej är påslaget",
+                  "cause": "Med Stör ej på är telefonen tyst även om allt annat är rätt inställt.",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Ser du en lila eller mörk knapp med en halvmåne är Stör ej påslaget.",
+                    "Tryck på halvmånen så att knappen slocknar och blir grå.",
+                    "Svep uppåt för att stänga rutan."
+                  ]
+                },
+                {
+                  "slug": "byt-ringsignal",
+                  "title": "Ringsignalen är för diskret",
+                  "cause": "Vissa signaler börjar mjukt och hörs dåligt om man är i ett annat rum.",
+                  "steps": [
+                    "Öppna Inställningar, Ljud och haptik.",
+                    "Tryck på Ringsignal.",
+                    "Tryck dig igenom listan och lyssna på några.",
+                    "Välj en som börjar högt direkt och som du hör tydligt.",
+                    "Tryck på Tillbaka för att spara valet."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "ljud-samtal",
+              "label": "Jag hör dåligt under samtal",
+              "icon": "📞",
+              "heading": "Det hörs dåligt när jag pratar",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "hoj-under-samtal",
+                  "title": "Höj volymen medan du pratar",
+                  "cause": "Samtalsvolymen går bara att ställa in under ett pågående samtal.",
+                  "steps": [
+                    "Ring upp någon, eller vänta tills du blir uppringd.",
+                    "Medan samtalet pågår, tryck på den övre volymknappen på vänster sida.",
+                    "Tryck flera gånger tills det hörs bra.",
+                    "Telefonen kommer ihåg det till nästa samtal."
+                  ]
+                },
+                {
+                  "slug": "hogtalare",
+                  "title": "Sätt på högtalaren",
+                  "cause": "Med högtalaren hör man ofta mycket bättre, och man slipper hålla telefonen mot örat.",
+                  "steps": [
+                    "Under samtalet visas några runda knappar på skärmen.",
+                    "Tryck på den som heter Högtalare.",
+                    "Håll telefonen framför dig i stället för mot örat.",
+                    "Tryck på Högtalare igen för att stänga av."
+                  ]
+                },
+                {
+                  "slug": "igensatt",
+                  "title": "Hörsnäckan är igensatt",
+                  "cause": "Damm och ludd samlas i det smala gallret och dämpar ljudet. Det händer alla med tiden.",
+                  "steps": [
+                    "Titta på det smala gallret allra högst upp på skärmens framsida.",
+                    "Ser det grått eller igensatt ut är det förklaringen.",
+                    "Borsta försiktigt med en torr och mjuk tandborste.",
+                    "Använd aldrig vatten, sprit eller något vasst av metall."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "ljud-inget-alls",
+              "label": "Det kommer inget ljud alls",
+              "icon": "🔇",
+              "heading": "Helt tyst i telefonen",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "bluetooth",
+                  "title": "Ljudet går till något annat",
+                  "cause": "Är telefonen ihopkopplad med hörlurar, en högtalare eller bilen skickas ljudet dit i stället.",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Titta på knappen som ser ut som ett B av streck. Är den blå är bluetooth på.",
+                    "Tryck på den så att den blir grå.",
+                    "Prova ljudet igen.",
+                    "Behöver du bluetooth senare trycker du bara på knappen igen."
+                  ]
+                },
+                {
+                  "slug": "omkopplaren-igen",
+                  "title": "Omkopplaren står på tyst",
+                  "steps": [
+                    "Titta på telefonens vänstra sida, ovanför volymknapparna.",
+                    "Syns ett orange streck: skjut omkopplaren mot skärmen."
+                  ]
+                },
+                {
+                  "slug": "starta-om-ljud",
+                  "title": "Starta om telefonen",
+                  "cause": "Hjälper förvånansvärt ofta när ljudet försvunnit helt.",
+                  "steps": [
+                    "Håll in knappen på höger sida och den övre volymknappen på vänster sida samtidigt.",
+                    "Håll kvar tills det står Dra för att stänga av högst upp.",
+                    "Dra den vita cirkeln åt höger med fingret.",
+                    "Vänta en halv minut medan skärmen är svart.",
+                    "Håll in knappen på höger sida tills det vita äpplet visas. Släpp då."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-skarmen",
+          "label": "Skärmen",
+          "icon": "🔆",
+          "heading": "Vad är det för besvär med skärmen?",
+          "published": true,
+          "children": [
+            {
+              "slug": "skarm-liten-text",
+              "label": "Texten är för liten",
+              "icon": "🔠",
+              "heading": "Texten är för liten att läsa",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "textstorlek",
+                  "title": "Gör texten större",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Tryck på Skärm och ljusstyrka.",
+                    "Dra nedåt och tryck på Textstorlek.",
+                    "Dra reglaget längst ned åt höger med fingret.",
+                    "Texten ovanför ändras medan du drar, så du ser hur det blir."
+                  ]
+                },
+                {
+                  "slug": "annu-storre",
+                  "title": "Gör texten ännu större",
+                  "cause": "Räcker inte den vanliga inställningen finns ett läge med betydligt större text.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Hjälpmedel.",
+                    "Tryck på Visning och textstorlek.",
+                    "Tryck på Större text.",
+                    "Slå på Större hjälpmedelsstorlekar högst upp.",
+                    "Dra reglaget längst ned åt höger. Nu går det mycket längre."
+                  ]
+                },
+                {
+                  "slug": "fet-text",
+                  "title": "Gör texten tjockare",
+                  "cause": "Tjockare bokstäver är lättare att läsa än bara större.",
+                  "steps": [
+                    "Öppna Inställningar, Skärm och ljusstyrka.",
+                    "Slå på Fet text så knappen blir grön."
+                  ]
+                },
+                {
+                  "slug": "forstora-med-fingrar",
+                  "title": "Förstora tillfälligt med två fingrar",
+                  "cause": "I de flesta appar går det att zooma in på just det man tittar på.",
+                  "steps": [
+                    "Sätt två fingrar på skärmen.",
+                    "Dra isär dem långsamt. Bilden förstoras.",
+                    "Dra ihop fingrarna igen för att gå tillbaka."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "skarm-morkt",
+              "label": "Skärmen är för mörk",
+              "icon": "🌙",
+              "heading": "Skärmen är för mörk",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "ljusstyrka",
+                  "title": "Skruva upp ljusstyrkan",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Leta upp den långa stapeln med en solsymbol.",
+                    "Dra den uppåt med fingret.",
+                    "Svep uppåt för att stänga rutan."
+                  ]
+                },
+                {
+                  "slug": "automatisk-ljusstyrka",
+                  "title": "Telefonen sänker ljuset själv",
+                  "cause": "Telefonen känner av ljuset i rummet och dämpar skärmen. I ett mörkt rum blir det ofta för mörkt.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Tryck på Hjälpmedel.",
+                    "Tryck på Visning och textstorlek.",
+                    "Dra längst ned i listan.",
+                    "Stäng av Automatisk ljusstyrka så knappen blir grå."
+                  ]
+                },
+                {
+                  "slug": "morkt-lage",
+                  "title": "Mörkt läge är påslaget",
+                  "cause": "I mörkt läge blir bakgrunden svart och texten vit. Många tycker det är svårläst.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Tryck på Skärm och ljusstyrka.",
+                    "Högst upp finns två bilder, Ljust och Mörkt.",
+                    "Tryck på Ljust."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "skarm-slacks",
+              "label": "Skärmen släcks för fort",
+              "icon": "⏱️",
+              "heading": "Skärmen släcks medan jag läser",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "autolas",
+                  "title": "Låt skärmen vara tänd längre",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Tryck på Skärm och ljusstyrka.",
+                    "Dra nedåt och tryck på Autolås.",
+                    "Välj 3 minuter eller 5 minuter."
+                  ]
+                },
+                {
+                  "slug": "lageffekt",
+                  "title": "Lågeffektläge släcker skärmen fortare",
+                  "cause": "När batteriet är lågt sparar telefonen ström genom att släcka snabbt.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Batteri.",
+                    "Är Lågeffektläge grönt: tryck på det så det blir grått.",
+                    "Går batteriet under 20 procent slår det på sig själv igen. Det är inget fel."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "skarm-vander",
+              "label": "Bilden vänder sig fel",
+              "icon": "🔄",
+              "heading": "Bilden vänder sig när jag inte vill",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "rotationslas",
+                  "title": "Lås skärmens riktning",
+                  "cause": "Med låset på ligger bilden still hur du än håller telefonen.",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Leta upp knappen med ett hänglås och en pil runt om.",
+                    "Tryck på den. Blir den röd är riktningen låst.",
+                    "Svep uppåt för att stänga rutan.",
+                    "Vill du kunna vända telefonen igen: tryck på knappen så den blir grå."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-batteri",
+          "label": "Batteri och laddning",
+          "icon": "🔋",
+          "heading": "Vad gäller batteriet?",
+          "published": true,
+          "children": [
+            {
+              "slug": "bat-tar-slut",
+              "label": "Batteriet tar slut för fort",
+              "icon": "📉",
+              "heading": "Batteriet räcker inte dagen",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "lageffektlage",
+                  "title": "Slå på lågeffektläge",
+                  "cause": "Telefonen drar då mindre ström i bakgrunden. Du märker knappt någon skillnad i användningen.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Batteri.",
+                    "Slå på Lågeffektläge så knappen blir grön."
+                  ]
+                },
+                {
+                  "slug": "vilken-app",
+                  "title": "Se vilken app som drar mest",
+                  "steps": [
+                    "Öppna Inställningar, Batteri.",
+                    "Dra nedåt till listan över appar.",
+                    "Överst ligger den app som dragit mest ström det senaste dygnet.",
+                    "Drar en app mycket som du sällan använder kan du ta bort den."
+                  ]
+                },
+                {
+                  "slug": "batterihalsa",
+                  "title": "Batteriet kan vara slitet",
+                  "cause": "Ett batteri håller ungefär tre till fyra år. Sedan minskar det hur mycket det rymmer.",
+                  "steps": [
+                    "Öppna Inställningar, Batteri.",
+                    "Tryck på Batterihälsa och laddning.",
+                    "Titta på siffran vid Maximal kapacitet.",
+                    "Står det under 80 procent är batteriet slitet.",
+                    "Det går att byta hos en verkstad. Ring den som hjälper dig innan du bokar."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "bat-laddar-inte",
+              "label": "Telefonen laddar inte",
+              "icon": "🔌",
+              "heading": "Telefonen laddar inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "dammig-kontakt",
+                  "title": "Kontakten är igensatt av ludd",
+                  "cause": "Ludd från fickor packas ihop i hålet och hindrar kabeln från att nå botten. Detta är den absolut vanligaste orsaken.",
+                  "steps": [
+                    "Titta rakt in i hålet nedtill på telefonen, gärna med en lampa.",
+                    "Ser du grått ludd är det förklaringen.",
+                    "Peta försiktigt ut luddet med en tandpetare av trä.",
+                    "Använd aldrig något av metall, det kan förstöra kontakten.",
+                    "Prova att ladda igen."
+                  ]
+                },
+                {
+                  "slug": "kabel-eller-uttag",
+                  "title": "Kabeln eller adaptern är trasig",
+                  "cause": "Kablar går sönder inuti utan att det syns utanpå.",
+                  "steps": [
+                    "Prova en annan kabel om du har en.",
+                    "Prova ett annat vägguttag.",
+                    "Prova att sätta kabeln i en annan adapter.",
+                    "Känn på kabeln nära kontakten. Är den knäckt eller varm ska den bytas."
+                  ]
+                },
+                {
+                  "slug": "helt-urladdad",
+                  "title": "Telefonen är helt urladdad",
+                  "cause": "Är batteriet helt tomt dröjer det innan telefonen visar något alls.",
+                  "steps": [
+                    "Sätt i laddaren och låt telefonen ligga.",
+                    "Vänta minst en kvart utan att röra den.",
+                    "Först då visas en batterisymbol på skärmen.",
+                    "Vänta ytterligare en stund innan du startar den."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "bat-procent",
+              "label": "Jag ser inte hur mycket batteri som är kvar",
+              "icon": "🔢",
+              "heading": "Batterisiffran syns inte",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "visa-procent",
+                  "title": "Visa siffran uppe i hörnet",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Batteri.",
+                    "Slå på Batteriprocent så knappen blir grön.",
+                    "Nu står siffran inuti batterisymbolen uppe till höger."
+                  ]
+                },
+                {
+                  "slug": "svep-ned",
+                  "title": "Svep ned för att se siffran",
+                  "cause": "Fungerar även utan inställningen ovan.",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Siffran står högst upp i rutan som visas.",
+                    "Svep uppåt för att stänga."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-samtal",
+          "label": "Ringa och svara",
+          "icon": "📞",
+          "heading": "Vad gäller samtalen?",
+          "published": true,
+          "children": [
+            {
+              "slug": "samtal-kan-inte-ringa",
+              "label": "Jag kan inte ringa",
+              "icon": "🚫",
+              "heading": "Det går inte att ringa",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "tackning-samtal",
+                  "title": "Ingen täckning",
+                  "steps": [
+                    "Titta längst upp till vänster på skärmen.",
+                    "Står det Ingen täckning eller Söker: gå till ett annat rum, eller ut.",
+                    "Vänta tills prickarna visas igen.",
+                    "Prova sedan att ringa."
+                  ]
+                },
+                {
+                  "slug": "hela-numret",
+                  "title": "Numret är inte komplett",
+                  "cause": "Ett svenskt nummer behöver riktnummer, även när du ringer inom samma ort.",
+                  "steps": [
+                    "Tryck på Telefon, den gröna luren.",
+                    "Tryck på Knappsats längst ned.",
+                    "Slå hela numret, med den inledande nollan.",
+                    "Ringer du till utlandet ska numret börja med ett plustecken.",
+                    "Tryck på den gröna luren för att ringa upp."
+                  ]
+                },
+                {
+                  "slug": "flygplanslage-samtal",
+                  "title": "Flygplansläget är på",
+                  "steps": [
+                    "Svep nedåt från skärmens övre högra hörn.",
+                    "Är knappen med flygplanet orange: tryck på den så den blir grå.",
+                    "Vänta en halv minut och prova igen."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "samtal-reklam",
+              "label": "Jag blir uppringd av reklam och bedragare",
+              "icon": "☎️",
+              "heading": "Oönskade samtal",
+              "intro": "Det finns bra sätt att slippa det mesta.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "svara-inte",
+                  "title": "Svara inte på nummer du inte känner igen",
+                  "cause": "Bedragare ringer och utger sig för att vara från banken, polisen eller Microsoft. De är skickliga och låter trovärdiga.",
+                  "steps": [
+                    "Låt telefonen ringa färdigt. Är det viktigt lämnar de meddelande.",
+                    "Ring aldrig upp okända utlandsnummer, det kan kosta mycket.",
+                    "Lämna aldrig ut BankID, koder eller lösenord på telefon. Ingen seriös person frågar efter det.",
+                    "Har du ändå svarat och känner dig osäker: lägg på och ring den som hjälper dig."
+                  ]
+                },
+                {
+                  "slug": "blockera-nummer",
+                  "title": "Blockera numret",
+                  "steps": [
+                    "Tryck på Telefon, den gröna luren.",
+                    "Tryck på Senaste längst ned.",
+                    "Leta upp numret i listan.",
+                    "Tryck på den blå cirkeln med ett i bredvid numret.",
+                    "Dra nedåt och tryck på Blockera den som ringer."
+                  ]
+                },
+                {
+                  "slug": "tysta-okanda",
+                  "title": "Låt okända nummer gå till telefonsvararen",
+                  "cause": "Personer som finns i dina kontakter ringer fortfarande som vanligt.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Telefon.",
+                    "Dra nedåt och tryck på Tysta okända uppringare.",
+                    "Slå på det så knappen blir grön."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "samtal-hittar-inte-nummer",
+              "label": "Jag hittar inte ett telefonnummer",
+              "icon": "🔍",
+              "heading": "Hitta ett nummer",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "sok-kontakter",
+                  "title": "Sök bland kontakterna",
+                  "steps": [
+                    "Tryck på Telefon, den gröna luren.",
+                    "Tryck på Kontakter längst ned.",
+                    "Dra listan nedåt så en sökruta visas högst upp.",
+                    "Skriv de första bokstäverna i namnet.",
+                    "Tryck på namnet och sedan på numret för att ringa."
+                  ]
+                },
+                {
+                  "slug": "senaste-samtal",
+                  "title": "Titta bland de senaste samtalen",
+                  "steps": [
+                    "Tryck på Telefon, Senaste.",
+                    "Bläddra i listan efter datum.",
+                    "Tryck på numret för att ringa upp.",
+                    "Vill du spara det: tryck på den blå cirkeln med ett i, och sedan på Skapa ny kontakt."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-losenord",
+          "label": "Lösenord och inloggning",
+          "icon": "🔑",
+          "heading": "Vad gäller inloggningen?",
+          "published": true,
+          "children": [
+            {
+              "slug": "los-glomt",
+              "label": "Jag har glömt ett lösenord",
+              "icon": "🤷",
+              "heading": "Ett glömt lösenord",
+              "intro": "Alla era lösenord finns samlade i Proton Pass. Ni behöver aldrig komma ihåg dem.",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "hamta-i-proton",
+                  "title": "Hämta lösenordet i Proton Pass",
+                  "cause": "Proton Pass är appen med nyckeln i mappen på hemskärmen. Där ligger alla lösenord.",
+                  "steps": [
+                    "Tryck på den blå knappen längre ned för att öppna Proton Pass.",
+                    "Sök upp tjänsten du vill logga in på i listan.",
+                    "Tryck på lösenordet. Då kopieras det.",
+                    "Gå tillbaka hit och öppna appen igen.",
+                    "Håll fingret nedtryckt i rutan för lösenord tills Klistra in visas, och tryck på det."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Öppna Proton Pass och sök upp tjänsten i listan."
+                },
+                {
+                  "slug": "telefonen-fyller-i",
+                  "title": "Telefonen kan fylla i åt dig",
+                  "cause": "När rutan för lösenord visas föreslår telefonen ofta rätt lösenord av sig själv.",
+                  "steps": [
+                    "Tryck i rutan där lösenordet ska skrivas.",
+                    "Titta strax ovanför tangentbordet.",
+                    "Står det ett förslag med en nyckelsymbol: tryck på det.",
+                    "Titta på telefonen så den känner igen ditt ansikte.",
+                    "Lösenordet fylls i av sig själv."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "los-face-id",
+              "label": "Face ID känner inte igen mig",
+              "icon": "😐",
+              "heading": "Telefonen känner inte igen ansiktet",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "nagot-skymmer",
+                  "title": "Något skymmer ansiktet eller kameran",
+                  "steps": [
+                    "Ta av mössa, solglasögon eller halsduk som täcker ansiktet.",
+                    "Håll telefonen rakt framför ansiktet, ungefär en armlängd bort.",
+                    "Kontrollera att fingret inte täcker den svarta remsan allra högst upp på skärmen.",
+                    "Torka av skärmens överkant med en torr trasa."
+                  ]
+                },
+                {
+                  "slug": "alternativt-utseende",
+                  "title": "Lägg till ett andra utseende",
+                  "cause": "Bär du glasögon ibland kan telefonen lära sig båda varianterna.",
+                  "steps": [
+                    "Öppna Inställningar.",
+                    "Dra nedåt och tryck på Face ID och lösenkod.",
+                    "Skriv in din lösenkod.",
+                    "Tryck på Ställ in ett alternativt utseende.",
+                    "Följ anvisningarna på skärmen och rör huvudet långsamt i en cirkel."
+                  ]
+                },
+                {
+                  "slug": "nollstall-face-id",
+                  "title": "Lär telefonen ditt ansikte på nytt",
+                  "cause": "Ansiktet förändras med åren. Att ställa in på nytt hjälper ofta.",
+                  "steps": [
+                    "Öppna Inställningar, Face ID och lösenkod.",
+                    "Skriv in din lösenkod.",
+                    "Tryck på Nollställ Face ID.",
+                    "Tryck sedan på Ställ in Face ID.",
+                    "Följ anvisningarna och rör huvudet långsamt i en cirkel, två gånger."
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "los-apple-id",
+              "label": "Telefonen frågar om Apple-ID-lösenord hela tiden",
+              "icon": "🍎",
+              "heading": "Frågan om Apple-ID kommer om och om igen",
+              "published": true,
+              "children": [],
+              "solutions": [
+                {
+                  "slug": "skriv-in-en-gang",
+                  "title": "Skriv in lösenordet en gång",
+                  "cause": "Frågan kommer tillbaka tills telefonen fått rätt lösenord.",
+                  "steps": [
+                    "Tryck på den blå knappen längre ned för att öppna Proton Pass.",
+                    "Sök upp Apple i listan.",
+                    "Tryck på lösenordet. Då kopieras det.",
+                    "Gå tillbaka hit och öppna appen igen.",
+                    "Håll fingret nedtryckt i rutan för lösenord tills Klistra in visas, och tryck på det.",
+                    "Tryck på Logga in."
+                  ],
+                  "needsPassword": true,
+                  "passwordHint": "Sök på Apple i Proton Pass."
+                },
+                {
+                  "slug": "starta-om-apple-id",
+                  "title": "Frågan kommer trots att du skrivit rätt",
+                  "steps": [
+                    "Håll in knappen på höger sida och den övre volymknappen på vänster sida samtidigt.",
+                    "Håll kvar tills det står Dra för att stänga av högst upp.",
+                    "Dra den vita cirkeln åt höger med fingret.",
+                    "Vänta en halv minut medan skärmen är svart.",
+                    "Håll in knappen på höger sida tills det vita äpplet visas. Släpp då.",
+                    "Öppna Inställningar och tryck på ditt namn allra högst upp.",
+                    "Står det att du behöver logga in igen: tryck på det och skriv lösenordet.",
+                    "Hjälper ingenting: hör av dig till den som hjälper dig med tekniken."
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutions": []
+        },
+        {
+          "slug": "mobil-hittar-inte-app",
+          "label": "Jag hittar inte en app",
+          "icon": "🔍",
+          "heading": "En app har försvunnit",
+          "intro": "Appar försvinner sällan på riktigt. Oftast har de bara hamnat någon annanstans.",
+          "published": true,
+          "children": [],
+          "solutions": [
+            {
+              "slug": "sok-appen",
+              "title": "Sök efter appen",
+              "cause": "Det snabbaste sättet, och det fungerar var appen än ligger.",
+              "steps": [
+                "Gå till hemskärmen.",
+                "Dra fingret nedåt mitt på skärmen, inte från kanten.",
+                "En sökruta visas högst upp och tangentbordet fälls upp.",
+                "Skriv de första bokstäverna i appens namn.",
+                "Tryck på appen i listan."
+              ]
+            },
+            {
+              "slug": "i-en-mapp",
+              "title": "Appen ligger i en mapp",
+              "cause": "Mappar ser ut som en ruta med flera små ikoner inuti.",
+              "steps": [
+                "Svep åt vänster och höger på hemskärmen.",
+                "Leta efter rutor som innehåller flera små ikoner.",
+                "Tryck på en sådan ruta för att öppna mappen.",
+                "Hittar du appen: håll fingret på den och dra ut den ur mappen."
+              ]
+            },
+            {
+              "slug": "appbiblioteket",
+              "title": "Appen ligger i Appbiblioteket",
+              "cause": "Längst till höger, efter alla hemskärmar, ligger alla appar samlade.",
+              "steps": [
+                "Svep åt vänster på hemskärmen om och om igen.",
+                "Till slut kommer du till en sida med rutor och rubriker.",
+                "Dra fingret nedåt på den sidan för att få en lista i bokstavsordning.",
+                "Hittar du appen: håll fingret på den och tryck på Lägg till på hemskärmen."
+              ]
+            },
+            {
+              "slug": "hamta-igen",
+              "title": "Appen är borttagen",
+              "cause": "Har appen raderats går den att hämta gratis igen. Dina uppgifter finns kvar.",
+              "steps": [
+                "Öppna App Store, den blå ikonen med ett vitt A.",
+                "Tryck på Sök längst ned till höger.",
+                "Skriv appens namn.",
+                "Tryck på molnet med en pil nedåt bredvid appen.",
+                "Vänta tills det står Öppna."
+              ]
+            }
+          ]
+        }
+      ],
+      "solutions": []
+    }
+  ]
+}

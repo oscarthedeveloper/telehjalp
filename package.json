@@ -9,7 +9,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "validate": "node scripts/validate-content.mjs",
-    "prebuild": "node scripts/validate-content.mjs"
+    "prebuild": "node scripts/validate-content.mjs",
+    "export": "node scripts/export-content.mjs"
   },
   "dependencies": {
     "next": "14.2.15",
